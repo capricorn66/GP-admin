@@ -1,0 +1,141 @@
+.daterangepicker {
+  border: 1px solid $gray-400;
+  border-radius: 0;
+  @include media-breakpoint-down(sm) {
+    width: 270px;
+  }
+  &::after,
+  &::before {
+    display: none;
+  }
+  .drp-calendar {
+    max-width: none;
+  }
+  select.hourselect,
+  select.minuteselect,
+  select.ampmselect,
+  select.monthselect,
+  select.yearselect {
+    height: 40px;
+    padding: 7px 36px 7px 10px;
+    font-size: 1.2rem;
+    display: inline-block;
+    border: 1px solid $input-border-color;
+  }
+  select.hourselect,
+  select.minuteselect,
+  select.ampmselect {
+    width: auto;
+  }
+  select.monthselect,
+  select.yearselect {
+    width: calc(50% - 5px);
+  }
+  select.monthselect {
+    margin-right: 10px;
+  }
+
+  .calendar-table thead > tr:first-child th {
+    height: 48px;
+    width: 40px;
+    &.month {
+      width: auto;
+    }
+    &.available:hover {
+      background: transparent;
+      span {
+        border-color: $black;
+      }
+    }
+  }
+
+  .calendar-time {
+    select {
+      display: inline-block;
+    }
+  }
+
+  .calendar-table td.off {
+    color: $gray-600;
+    border-color: $white;
+  }
+
+  .calendar-table th:not([class]) {
+    height: 36px;
+    width: 36px;
+    font-size: 1.2rem;
+    color: $gray-600;
+    font-weight: 400;
+  }
+
+  &.single {
+    .calendar-table td.start-date {
+      &.start-date.available {
+        border-radius: 0;
+      }
+    }
+  }
+
+  .calendar-table td {
+    border-radius: 8;
+    height: 34px;
+    width: 34px;
+    font-size: 1.2rem;
+    border-width: 2px;
+    border-color: $white;
+    border-style: solid;
+    &.available:hover {
+      box-shadow: 0 0 0 18px $gray-300 inset;
+      background: transparent;
+    }
+    &.active,
+    &.active:hover {
+      background: $black;
+      &.off {
+        color: $white;
+      }
+    }
+    &.end-date.available {
+      border-radius: 0;
+    }
+    &.start-date.available {
+      border-radius: 0;
+    }
+    &.in-range {
+      border-radius: 0;
+      background: $gray-300;
+    }
+  }
+
+  .drp-buttons .btn {
+    font-weight: 400;
+    padding: 0 16px;
+  }
+  /*
+  .drp-calendar.left {
+    padding: 16px 0 8px 32px;
+    @include media-breakpoint-down(sm) {
+      padding-left: 16px;
+    }
+    .calendar-time,
+    .calendar-table {
+      padding-right: 32px;
+      @include media-breakpoint-down(sm) {
+        padding-right: 16px;
+      }
+    }
+  }
+
+  .drp-calendar.right {
+    padding: 16px 32px;
+    @include media-breakpoint-down(sm) {
+      padding: 16px;
+    }
+    margin-left: 0;
+  }
+  */
+
+}
+
+
+

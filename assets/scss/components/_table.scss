@@ -1,0 +1,72 @@
+.table {
+  margin-bottom: 16px;
+  tr {
+    background-color: $white;
+    th {
+      background-color: $gray-100;
+      color: $gray-600;
+      font-weight: 400;
+      border-bottom: 3px solid $gray-200;
+      border-top: 0;
+      padding: 12px 18px;
+      vertical-align: middle;
+      font-size: 14px;
+      line-height: 1.2em;
+
+      &.sorting {
+        padding-left: 40px;
+        background-image: url("../images/sort.svg");
+        background-repeat: no-repeat;
+        background-position: left 16px center;
+      }
+      &.sorting_asc {
+        padding-left: 40px;
+        background-image: url("../images/sort-down.svg");
+        background-repeat: no-repeat;
+        background-position: left 16px center;
+      }
+      &.sorting_desc {
+        padding-left: 40px;
+        background-image: url("../images/sort-up.svg");
+        background-repeat: no-repeat;
+        background-position: left 16px center;
+      }
+
+    }
+    td {
+      vertical-align: middle;
+      padding: 8px 18px;
+      border-bottom: 3px solid $gray-200;
+      border-top: 0;
+      line-height: 1.3em;
+      small {
+        opacity: .8;
+      }
+    }
+  }
+
+  .btn-remove,
+  .btn-action {
+    display: inline-block;
+    cursor: pointer;
+    i {
+      font-size: 24px;
+      color: $gray-400;
+      &:focus,
+      &:hover {
+        color: $gray-700;
+      }
+    }
+  }
+
+  .btn-remove {
+    i {
+      color: $primary-light;
+      &:focus,
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+}

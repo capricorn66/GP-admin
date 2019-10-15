@@ -1,0 +1,116 @@
+main {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+        @include media-breakpoint-down(md) {
+            margin-bottom: 88px;
+        }
+        @include media-breakpoint-only(lg) {
+            margin-bottom: 144px;
+        }
+        @include media-breakpoint-up(xl) {
+            margin-bottom: 176px;
+        }
+
+    }
+    width: 100vw;
+    height: 100vh;
+    background: $gray-200;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    flex: 1 0 auto;
+    position: relative;
+    @include media-breakpoint-up(xl) {
+        width: calc(100vw - 280px);
+    }
+    @media screen and (min-width: 1440px) {
+        width: calc(100vw - 330px);
+    }
+
+    .main-view {
+        position: relative;
+        padding: 20px 24px;
+        @include media-breakpoint-down(sm) {
+            padding: 20px 15px;
+        }
+        @include media-breakpoint-up(xl) {
+            padding: 20px 40px;
+        }
+        @media screen and (min-width: 1819px) {
+            padding-left: calc( (100vw - (1408px + 330px)) / 2 ) !important;
+            padding-right: calc( (100vw - (1408px + 330px)) / 2 ) !important;
+        }
+
+        > h2:not(:first-child) {
+            margin-top: 6rem;
+            &::before {
+                content: "";
+                display: block;
+                height: 6rem;
+                margin-top: -6rem;
+            }
+        }
+
+        > h3:not(:first-child) {
+            margin-top: 4rem;
+            &::before {
+                content: "";
+                display: block;
+                height: 6rem;
+                margin-top: -6rem;
+            }
+        }
+
+        > h4:not(:first-child) {
+            margin-top: 4rem;
+            &::before {
+                content: "";
+                display: block;
+                height: 6rem;
+                margin-top: -6rem;
+            }
+        }
+
+        h2 + h3 {
+            margin-top: 0 !important;
+            &::before {
+                display: none !important;
+            }
+        }
+
+        .table,
+        ol,
+        ul,
+        .p,
+        p {
+            a:not([class]) {
+                color: $primary;
+            }
+        }
+        .main-title {
+            display: -ms-flexbox;
+            display: flex;
+            margin-bottom: 40px;
+            background-color: $gray-300;
+            padding: 8px 16px;
+            .h1,
+            h1 {
+                margin-bottom: 4px;
+                font-weight: 400;
+                strong {
+                    font-weight: 600;
+                }
+            }
+            small {
+                color: $gray-600;
+            }
+        }
+
+        .img-selected {
+            box-shadow: 0 0 0 4px #960A9D inset;
+        }
+    }
+
+}

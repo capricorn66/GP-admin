@@ -1,0 +1,66 @@
+.alert {
+  background: $white;
+  border: 1px solid $gray-300;
+  color: $black;
+  min-height: 66px;
+  padding: 32px 80px 32px 120px;
+
+  &::before {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    color: $white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 32px;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 32px;
+  }
+
+
+  &.alert-success {
+    &::before {
+      content: "\e91a";
+      background-color: $alert-success;
+    }
+  }
+  &.alert-danger {
+    &::before {
+      content: "\e918";
+      background-color: $alert-danger;
+    }
+  }
+  &.alert-warning {
+    &::before {
+      content: "\e919";
+      background-color: $alert-warning;
+    }
+  }
+  &.alert-info {
+    &::before {
+      content: "\e917";
+      background-color: $alert-info;
+    }
+  }
+
+}

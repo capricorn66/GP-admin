@@ -1,0 +1,292 @@
+// stylelint-disable selector-no-qualifying-type
+
+button {
+    background-color: transparent;
+    border: 0;
+}
+
+//
+// Base styles
+//
+
+.btn {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: $btn-font-weight;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 0 solid transparent;
+    height: $input-btn-height;
+    @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size-base !important, $btn-line-height, $btn-border-radius);
+    @include transition($btn-transition);
+
+    input {
+        min-height: $input-btn-height - .2rem;
+        @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size-base !important, $btn-line-height, $btn-border-radius);
+    }
+
+    // Share hover and focus styles
+    @include hover-focus {
+        text-decoration: none;
+    }
+
+    &:focus,
+    &.focus {
+        outline: 0;
+        box-shadow: none
+    }
+
+    // Disabled comes first so active can properly restyle
+    &.disabled,
+    &:disabled {
+        opacity: $btn-disabled-opacity;
+        @include box-shadow(none);
+    }
+
+    // Opinionated: add "hand" cursor to non-disabled .btn elements
+    &:not(:disabled):not(.disabled) {
+        cursor: pointer;
+    }
+
+    &.btn-status {
+        background-color: transparent;
+        color: $gray-900;
+        &:not(:disabled):not(.disabled):active,
+        &:active,
+        &:focus,
+        &:hover,
+        &.active {
+            color: $white;
+            &.status-new {
+                background-color: $app-color-2;
+            }
+            &.status-confirmed {
+                background-color: $app-color-3;
+            }
+            &.status-paid {
+                background-color: $app-color-6;
+            }
+            &.status-canceled {
+                background-color: $gray-400;
+            }
+            &.status-all {
+                background-color: $gray-900;
+            }
+        }
+    }
+
+    &.btn-primary {
+        background-color: $app-color-5;
+        box-shadow: 0 0 0 1px $app-color-5 inset;
+        color: $white;
+        &:not(:disabled):not(.disabled):active,
+        &:active,
+        &:focus,
+        &:hover {
+            background-color: $app-color-6;
+            box-shadow: 0 0 0 1px $app-color-6 inset;
+        }
+    }
+
+    &.btn-light {
+        background-color: $gray-200;
+        color: $gray-900;
+        &:not(:disabled):not(.disabled):active,
+        &:active,
+        &.active,
+        &:focus,
+        &:hover {
+            background-color: $gray-500 !important;
+            color: $white !important;
+        }
+    }
+
+    &.btn-outline-light {
+        box-shadow: 0 0 0 1px $white inset;
+    }
+
+    &.btn-dark {
+        background-color: $gray-500;
+        color: $gray-900;
+        &:not(:disabled):not(.disabled):active,
+        &:active,
+        &:focus,
+        &:hover {
+            background-color: $gray-900;
+            color: $white;
+        }
+    }
+
+    &.btn-accordion {
+        position: relative;
+        display: block;
+        width: 100%;
+        text-align: left;
+        height: 48px;
+        color: $gray-900;
+        padding-right: 32px;
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 16px;
+            width: 20px;
+            height: 20px;
+            background-position: center right;
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24px' height='24px' viewBox='0 0 24 24'%3E%3Cpath fill='%2300153a' d='M7.2,14.6l3.8-3.7l3.8,3.7l1.2-1.1l-5-4.9l-5,4.9L7.2,14.6Z'/%3E%3C/svg%3E");
+        }
+        > span {
+            display: none;
+            + span {
+                display: inline-block;
+            }
+        }
+        &[aria-expanded="false"] {
+            &::after {
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24px' height='24px' viewBox='0 0 24 24'%3E%3Cpath fill='%2300153a' d='M14.833,8.6,11,12.33,7.167,8.6,6,9.735,11,14.6l5-4.865Z'/%3E%3C/svg%3E");
+            }
+            > span {
+                display: inline-block;
+                + span {
+                    display: none;
+                }
+            }
+        }
+
+    }
+
+}
+
+// Future-proof disabling of clicks on `<a>` elements
+a.btn.disabled,
+fieldset:disabled a.btn {
+    pointer-events: none;
+}
+
+
+//
+// Link buttons
+//
+
+// Make a button look and behave like a link
+.btn-default,
+.btn-link {
+    font-weight: $font-weight-normal;
+    color: $gray-900;
+    background-color: transparent;
+    transition: none;
+
+    @include hover {
+        text-decoration: none;
+        background-color: $gray-300;
+        border-color: transparent;
+        color: $gray-900;
+        i {
+            color: $gray-900;
+        }
+    }
+
+    &.active {
+        background-color: $gray-300;
+    }
+    &:focus,
+    &.focus {
+        text-decoration: none;
+        border-color: transparent;
+        box-shadow: none;
+        opacity: .7;
+    }
+
+    &:disabled,
+    &.disabled {
+        color: $btn-link-disabled-color;
+        pointer-events: none;
+    }
+
+    // No need for an active state here
+}
+
+.btn-default {
+    @include hover {
+        background-color: $gray-900;
+        color: $white;
+    }
+    &.active {
+        background-color: $gray-900;
+        color: $white;
+    }
+}
+
+//
+// Button Sizes
+//
+
+.btn-lg {
+    height: $input-btn-height-lg;
+    @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg !important, $btn-line-height-lg, $btn-border-radius-lg);
+    input {
+        min-height: $input-btn-height-lg - .2rem;
+        @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg !important, $btn-line-height-lg, $btn-border-radius-lg);
+    }
+    font-size: 20px !important;
+}
+
+.btn-sm {
+    height: $input-btn-height-sm;
+    padding-top: 1px !important;
+    @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm !important, $btn-line-height-sm, $btn-border-radius-sm);
+    input {
+        min-height: $input-btn-height-sm - .2rem;
+        @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm !important, $btn-line-height-sm, $btn-border-radius-sm);
+    }
+}
+
+
+//
+// Block button
+//
+
+.btn-block {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    // Vertically space out multiple block buttons
+    + .btn-block {
+        margin-top: $btn-block-spacing-y;
+    }
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    &.btn-block {
+        width: 100%;
+    }
+}
+
+
+//
+// button with next icon
+//
+
+.btn[class*="btn-"] {
+    i[class^="icon-"],
+    i[class*="icon-"] {
+        font-size: 120%;
+        position: relative;
+    }
+    &.btn-sm {
+        i[class^="icon-"],
+        i[class*="icon-"] {
+            font-size: 100%;
+            top: 0;
+            position: relative;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.status {
+  color: $white;
+  display: inline-block;
+  padding: 1px 16px 2px;
+  font-size: 14px;
+  height: 24px;
+  &.status-new {
+    background-color: $app-color-2;
+  }
+  &.status-confirmed {
+    background-color: $app-color-3;
+  }
+  &.status-paid {
+    background-color: $app-color-6;
+  }
+  &.status-canceled {
+    background-color: $gray-400;
+  }
+}

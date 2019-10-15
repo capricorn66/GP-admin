@@ -1,0 +1,8 @@
+.waves-button,
+.waves-circle {
+  -webkit-mask-image: none;
+  &.btn-dark,
+  &.btn-primary {
+    color: $white;
+  }
+}

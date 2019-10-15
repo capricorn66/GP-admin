@@ -1,0 +1,39 @@
+// Base class
+//
+// Requires one of the contextual, color modifier classes for `color` and
+// `background-color`.
+
+.badge {
+  display: inline-block;
+  padding: 5px 10px 3px;
+  font-size: 16px !important;
+  font-weight: 400;
+  line-height: 1;
+  min-width: 28px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  @include border-radius($badge-border-radius);
+  @include transition($badge-transition);
+  background: $primary;
+  color: $white;
+  position: relative;
+  top: -1px;
+
+  @at-root a#{&} {
+    @include hover-focus {
+      text-decoration: none;
+    }
+  }
+
+  // Empty badges collapse automatically
+  &:empty {
+    display: none;
+  }
+}
+
+sup.badge {
+  padding: 3px 8px 3px;
+  font-size: 10px;
+  top: -.5em;
+}

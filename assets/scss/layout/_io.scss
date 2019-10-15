@@ -1,0 +1,26 @@
+body {
+    -ms-flex-direction: column !important;
+    flex-direction: column !important;
+}
+
+header {
+    background: $gray-900;
+    padding: 32px 0 16px;
+    margin-bottom: 24px;
+    .navbar-brand {
+        img {
+            width: 200px;
+            display: inline-block;
+        }
+    }
+}
+h2 {
+    margin-bottom: 48px;
+}
+.box {
+    background: $white;
+    label {
+        color: $gray-900;
+        padding-left: 4px;
+    }
+}

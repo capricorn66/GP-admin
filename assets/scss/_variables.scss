@@ -1,0 +1,218 @@
+// Default colors
+
+$white: #FFF !default;
+$black: #000 !default;
+
+$gray-100: #f5f5f7 !default;
+$gray-200: #ebecef !default;
+$gray-300: #D6D9DF !default;
+$gray-400: #c2c7d0 !default;
+$gray-500: #ABB2BE !default;
+$gray-600: #7F8A9C !default;
+$gray-700: #57667d !default;
+$gray-800: #40516b !default;
+$gray-900: #00153a !default;
+
+//app colors
+
+$app-color-1: #fc7400;
+$app-color-2: #fbbd07;
+$app-color-3: #00b5ad;
+$app-color-4: #1e791e;
+$app-color-5: #96089d;
+$app-color-6: #BA5DBE;
+$app-color-7: #ca84ce;
+
+$alert-success: $app-color-3;
+$alert-danger: $app-color-1;
+$alert-warning: $app-color-4;
+$alert-info: $app-color-5;
+
+$primary:                       $app-color-1 !default;
+$primary-light:                 $app-color-6 !default;
+
+//icons img
+$icon-calendar:                 url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32px' height='32px' viewBox='0 0 32 32'%3E%3Cpath fill='%23C2C7D0' d='M1.3 32V2.7h5.3V0h2.7v2.7h13.3V0h2.7v2.7h5.3V32H1.3zM4 29.3h24V12H4v17.3zm0-20h24v-4h-2.7V8h-2.7V5.3H9.3V8H6.7V5.3H4v4zm7.1 11l1.9-1.9 2.4 2.4 5.1-5.1 1.9 1.9-6.9 6.9-4.4-4.2Z'/%3E%3C/svg%3E");
+$icon-clock:                    url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32px' height='32px' viewBox='0 0 32 32'%3E%3Cpath fill='%23C2C7D0' d='M0 16C0 7.2 7.2 0 16 0c3.1 0 6.2.9 8.8 2.7L22.5 5c-1.5-.9-3.2-1.5-4.9-1.7v3.1h-3.2V3.3C8.6 4 4 8.6 3.3 14.4h3.1v3.2H3.3C4 23.4 8.6 28 14.4 28.7v-3.2h3.2v3.2c5.8-.7 10.4-5.3 11.1-11.1h-3.1v-3.2h3.1c-.2-1.7-.8-3.4-1.7-4.9l2.3-2.3c4.9 7.4 2.9 17.3-4.5 22.2-7.4 4.9-17.3 2.9-22.2-4.5C.9 22.2 0 19.1 0 16zm10.1-3.6l2.3-2.3 3.7 3.7L29.2.5l2.3 2.3L16 18.3l-5.9-5.9Z'/%3E%3C/svg%3E");
+$icon-down-arrow:               url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24px' height='24px' viewBox='0 0 24 24'%3E%3Cpath fill='%23a9a9ab' d='M14.833,8.6,11,12.33,7.167,8.6,6,9.735,11,14.6l5-4.865Z'/%3E%3C/svg%3E");
+$icon-up-arrow:                 url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24px' height='24px' viewBox='0 0 24 24'%3E%3Cpath fill='%23a9a9ab' d='M7.2,14.6l3.8-3.7l3.8,3.7l1.2-1.1l-5-4.9l-5,4.9L7.2,14.6Z'/%3E%3C/svg%3E");
+$icon-search:                   url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24px' height='24px' viewBox='0 0 32 32'%3E%3Cpath fill='%23606060' d='M26.205+25.558l-6.567-6.53c1.287-1.406+2.079-3.269+2.079-5.316+0-4.365-3.571-7.917-7.96-7.917s-7.961+3.551-7.961+7.917+3.571+7.917+7.961+7.917c2.002+0+3.828-0.744+5.229-1.962l6.575+6.539zM6.709+13.712c0-3.862+3.162-7.004+7.048-7.004s7.047+3.142+7.047+7.004-3.162+7.004-7.047+7.004-7.048-3.142-7.048-7.004z'/%3E%3C/svg%3E");
+$icon-check:                    url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24px' height='24px' viewBox='0 0 32 32'%3E%3Cpath fill='%2346C873' d='M29.1 5.5L13.7 20.8 2.8 9.9 0 12.8l13.7 13.7L32 8.3l-2.9-2.8z'/%3E%3C/svg%3E") ;
+$icon-calendar:                 url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24px' height='24px' viewBox='0 0 32 32'%3E%3Cpath fill='%239DA5B7' d='M1 24V2h4V0h2v2h10V0h2v2h4v22H1zm2-2h18V9H3v13zM3 7h18V4h-2v2h-2V4H7v2H5V4H3v3zm8 13v-5.6l-2.3 2.3-1.4-1.4 4.7-4.7 4.7 4.7-1.4 1.4-2.3-2.3V20h-2z'/%3E%3C/svg%3E");
+
+// Body
+$body-bg:                   $gray-200 !default;
+$body-color:                $gray-900 !default;
+
+// Z-index master list
+$zindex-aside:                      1034 !default;
+$zindex-asideOverlay:               1033 !default;
+$zindex-header:                     1032 !default;
+$zindex-help:                       1034 !default;
+
+// Navbar
+$navbarHeight:                      8.8rem !default;
+
+// Badges
+$badge-border-radius:               1rem !default;
+
+// Fonts
+
+$font-size-base:                1.6rem !default;
+$font-size-lg:                  $font-size-base !default;
+$font-size-sm:                  $font-size-base !default;
+$font-size-xs:                  1.2rem !default;
+$line-height-base:              1.5 !default;
+$line-height-lg:                1.5 !default;
+$line-height-sm:                1.5 !default;
+
+// Typo
+$font-family-base:            'Lato', sans-serif !default;
+
+$super-font-size:             4.8rem !default;
+$h1-font-size:                3.2rem !default;
+$h2-font-size:                2.4rem !default;
+$h3-font-size:                2.0rem !default;
+$h4-font-size:                2.8rem !default;
+$h5-font-size:                1.6rem !default;
+$h6-font-size:                1.4rem !default;
+$p-font-size-sm:              1.2rem !default;
+
+$super-margin-bottom:         .9em !default;
+$h1-margin-bottom:            .9em !default;
+$h2-margin-bottom:            2.4rem !default;
+$h3-margin-bottom:            $h2-margin-bottom !default;
+$h4-margin-bottom:            $h2-margin-bottom !default;
+$h5-margin-bottom:            $h2-margin-bottom !default;
+$h6-margin-bottom:            $h2-margin-bottom !default;
+
+$super-line-height:           1.333em !default;
+$h1-line-height:              1.4em !default;
+$h2-line-height:              1.4em !default;
+$h3-line-height:              1.4em !default;
+$h4-line-height:              1.5em !default;
+$h5-line-height:              1.6em !default;
+$h6-line-height:              1.7em !default;
+$p-line-height-sm:            1.7em !default;
+
+$h1-font-size-sm:             2.4rem !default;
+$h2-font-size-sm:             2.0rem !default;
+$h3-font-size-sm:             $h3-font-size !default;
+$h4-font-size-sm:             $h4-font-size !default;
+$h5-font-size-sm:             $h5-font-size !default;
+$h6-font-size-sm:             $h6-font-size !default;
+
+$h1-margin-bottom-sm:         18px !default;
+$h2-margin-bottom-sm:         1em !default;
+$h3-margin-bottom-sm:         $h2-margin-bottom !default;
+$h4-margin-bottom-sm:         1.2em !default;
+$h5-margin-bottom-sm:         $h2-margin-bottom !default;
+$h6-margin-bottom-sm:         $h2-margin-bottom !default;
+
+$h1-line-height-sm:           1.333em !default;
+$h2-line-height-sm:           1.6em !default;
+$h3-line-height-sm:           $h3-line-height !default;
+$h4-line-height-sm:           $h4-line-height !default;
+$h5-line-height-sm:           $h5-line-height !default;
+$h6-line-height-sm:           $h6-line-height !default;
+
+$headings-font-family:        $font-family-base;
+$headings-font-weight:        400 !default;
+
+$lead-font-size:              1.8rem !default;
+$lead-margin-bottom:          32px !default;
+$lead-font-weight:            400 !default;
+
+$lead-font-size-sm:           1.6rem !default;
+$lead-margin-bottom-sm:       2.4rem !default;
+
+$small-font-size:             88% !default;
+
+// Grid breakpoints
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        sl: 1480px
+) !default;
+
+// Grid containers
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        sl: 1440px
+) !default;
+
+// Components
+
+$line-height-lg:                1.5 !default;
+$component-active-bg:           $gray-600 !default;
+$border-radius:                 4px !default;
+$border-radius-lg:              $border-radius !default;
+$border-radius-sm:              $border-radius !default;
+
+// Buttons + Forms
+$input-btn-height:              4rem !default;
+$input-btn-height-xs:           2rem !default;
+$input-btn-height-sm:           3.2rem !default;
+$input-btn-height-lg:           5.6rem !default;
+$input-btn-line-height:         $line-height-base !default;
+$input-btn-line-height-sm:      $line-height-sm !default;
+$input-btn-line-height-lg:      $line-height-lg !default;
+
+$custom-select-height:          $input-btn-height !default;
+$custom-select-height-sm:       $input-btn-height-sm !default;
+$custom-select-height-lg:       $input-btn-height-lg !default;
+
+$custom-file-height:            $input-btn-height !default;
+$custom-file-height-inner:      $input-btn-height !default;
+
+$input-btn-focus-shadow:        0 !default;
+$input-btn-focus-width:         0 !default;
+$input-btn-focus-color:         $component-active-bg !default;
+$input-btn-focus-box-shadow:    none !default;
+
+
+// Buttons
+
+$btn-padding-y:                 0 !default;
+$btn-padding-x:                 1.6rem !default;
+$btn-padding-y-sm:              $btn-padding-y !default;
+$btn-padding-x-sm:              1.2rem !default;
+$btn-padding-y-lg:              $btn-padding-y !default;
+$btn-padding-x-lg:              3rem !default;
+
+$btn-border-radius:             $border-radius !default;
+$btn-border-radius-lg:          $border-radius-lg !default;
+$btn-border-radius-sm:          $border-radius-sm !default;
+
+$btn-font-size-base:            $font-size-base !default;
+$btn-font-size-lg:              $btn-font-size-base !default;
+$btn-font-size-sm:              $font-size-sm !default;
+$btn-font-size-xs:              $font-size-xs !default;
+
+$btn-line-height:               1.5em !default;
+$btn-line-height-sm:            $btn-line-height !default;
+$btn-line-height-lg:            $btn-line-height !default;
+
+$btn-focus-box-shadow:          $input-btn-focus-box-shadow !default;
+
+$btn-disabled-bg:               $gray-300 !default;
+
+
+// Pagination
+
+$pagination-bg:                     transparent !default;
+
+// Navs
+
+$nav-link-padding-y:                1.5rem !default;
+$nav-link-padding-x:                1.5rem !default;
+
+// Forms
+
+$input-border-color:                $gray-500 !default;
