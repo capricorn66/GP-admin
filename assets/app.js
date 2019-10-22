@@ -112,15 +112,6 @@ $(document).ready( function() {
         }
     }).data('daterangepicker');
 
-    $('.sort-table').DataTable({
-        "lengthChange": false,
-        "ordering": true,
-        "info": false,
-        "paging": false,
-        "searching": false,
-        "order": [[ 1, "desc" ]]
-    });
-
     $('.custom-select').bsSelectInit();
 
     function selectRow(elem) {

@@ -3,6 +3,11 @@
   border-radius: 4px;
   height: 4rem;
   color: $gray-900;
+
+  &:focus {
+    border-color: $input-border-color;
+  }
+
   &.form-control-search {
     padding-right: 40px;
     background: $input-bg $icon-search no-repeat right 8px center !important;

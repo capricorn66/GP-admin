@@ -210,6 +210,21 @@
                 </table>
             </div>
 
+            <script>
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    $('.sort-table').DataTable({
+                        "lengthChange": false,
+                        "ordering": true,
+                        "info": false,
+                        "paging": false,
+                        "searching": false,
+                        "order": [[ 1, "desc" ]]
+                    });
+                });
+
+            </script>
+
             <div class="d-flex flex-column flex-sm-row flex-sm-wrap align-items-sm-center">
                 <div class="mb-32 gray-600">
                     <span class="pr-3">View on the page </span>

@@ -1,10 +1,12 @@
 .modal {
   .modal-dialog {
     margin-top: 0;
+    max-width: 600px;
   }
   .modal-content {
     border-radius: 0;
     background-color: $gray-100;
+    box-shadow: 0 0 16px 8px rgba( $gray-900, .2);
     .modal-header {
       @include media-breakpoint-only(sm) {
         padding: 16px 32px;
@@ -21,10 +23,10 @@
         padding: 32px 32px;
       }
       @include media-breakpoint-only(md) {
-        padding: 40px 48px 32px;
+        padding: 40px 48px;
       }
       @include media-breakpoint-up(lg) {
-        padding: 56px 80px 32px;
+        padding: 56px 80px;
       }
     }
     .modal-footer  {
@@ -40,25 +42,25 @@
     }
     .modal-header {
       position: relative;
-      background: rgb(103,103,103);
-      background: linear-gradient(90deg, rgba(103,103,103,1) 0%, rgba(0,0,0,1) 100%);
+      background: $app-color-1;
+      border-radius: 0;
       color: $white;
       min-height: 88px;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
       .modal-title {
         color: $white;
-        font-size: 32px;
+        font-size: 18px;
       }
       .close {
-        color: $app-color-1;
         opacity: 1;
         text-shadow: none;
         position: absolute;
         top: 50%;
-        margin-top: -26px;
+        margin-top: -24px;
         right: 24px;
-        &:hover {
-          color: $white;
-        }
+        color: $white;
         span {
            font-size: 20px;
          }
@@ -69,6 +71,11 @@
     }
     .modal-footer {
       border-top: 0;
+      display: block;
     }
   }
+}
+
+.modal-backdrop {
+  background-color: rgba($gray-900, .7);
 }

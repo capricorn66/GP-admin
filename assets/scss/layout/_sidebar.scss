@@ -69,7 +69,7 @@ body {
     &.sidebar-state-opened,
     &.sidebar-end-position {
       transform: translateX(280px);
-      box-shadow: 280px 0 0 100vw rgba(0,0,0,.3);
+      box-shadow: 280px 0 0 100vw rgba($gray-900, .3);
       + main {
         overflow: hidden;
       }
@@ -131,9 +131,9 @@ body {
             margin-top: -.2em;
           }
           .badge {
-            top: 20px;
+            top: 24px;
             @include media-breakpoint-down(md) {
-              top: 16px;
+              top: 20px;
             }
             position: absolute;
             right: 16px;

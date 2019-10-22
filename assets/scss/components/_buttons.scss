@@ -93,6 +93,29 @@ button {
         }
     }
 
+
+    &.btn-primary-light {
+        background-color: rgba($app-color-7,.2);
+        color: $app-color-6;
+        &:not(:disabled):not(.disabled):active,
+        &:active,
+        &:focus,
+        &:hover {
+            background-color: rgba($app-color-7,.4);
+        }
+    }
+
+    &.btn-secondary {
+        background-color: $gray-300;
+        color: $gray-900;
+        &:not(:disabled):not(.disabled):active,
+        &:active,
+        &:focus,
+        &:hover {
+            background-color: $gray-400;
+        }
+    }
+
     &.btn-light {
         background-color: $gray-200;
         color: $gray-900;
@@ -180,7 +203,6 @@ fieldset:disabled a.btn {
     color: $gray-900;
     background-color: transparent;
     transition: none;
-
     @include hover {
         text-decoration: none;
         background-color: $gray-300;

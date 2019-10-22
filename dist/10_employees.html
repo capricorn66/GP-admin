@@ -22,7 +22,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap&subset=latin-ext" rel="stylesheet">
 
-</head>
+<link href="css/app.min.css" rel="stylesheet"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
 
@@ -93,7 +93,7 @@
         <div class="main-header">
             <nav class="navbar">
                 <a class="navbar-brand d-xl-none" href="/#/"><img src="./images/GrapeTown.svg" alt=""></a>
-                <h1>Events</h1>
+                <h1>Employees</h1>
                 <div class="ml-auto d-flex align-items-center">
                     <div class="navbar-date">Wednesday, 9 October 2019</div>
                     <a href="" class="navbar-bell"><i class="icon-bell navbar-bell-ring"></i></a>
@@ -119,16 +119,13 @@
 
             <div class="d-flex flex-column flex-sm-row flex-sm-wrap align-items-sm-center">
                 <div class="pb-32 gray-600 d-flex align-items-sm-center nav-overflow">
-                    <a href="" class="btn btn-sm btn-status mr-8 status-confirmed active">Zatwierdzone</a>
-                    <a href="" class="btn btn-sm btn-status mr-8 status-new">New</a>
-                    <a href="" class="btn btn-sm btn-status mr-8 status-paid">Zapłacone</a>
-                    <a href="" class="btn btn-sm btn-status mr-8 status-canceled">Odrzucone</a>
-                    <a href="" class="btn btn-sm btn-status mr-8 status-all">All</a>
+                    <a href="" class="btn btn-sm btn-default mr-8 active">Current</a>
+                    <a href="" class="btn btn-sm btn-default mr-8">Former</a>
                     <span class="pl-md-32 d-none d-lg-inline-block">Showing 1-10 of 12</span>
                 </div>
                 <div class="ml-sm-auto mb-32">
                     <button type="button" class="btn btn-link d-flex d-sm-inline-flex" data-toggle="modal" data-target="#addModal">
-                        <i class="icon-plus mr-8"></i> Add new event
+                        <i class="icon-plus mr-8"></i> Add new employee
                     </button>
                 </div>
             </div>
@@ -138,70 +135,75 @@
                     <thead>
                         <tr>
                             <th data-orderable="false"></th>
-                            <th>ID</th>
-                            <th>Date of reservation</th>
-                            <th>Room</th>
-                            <th>Type of event</th>
-                            <th>Adults/children</th>
-                            <th>Customer</th>
-                            <th class="text-right">Calculated price</th>
-                            <th data-orderable="false">Status</th>
+                            <th data-orderable="false"></th>
+                            <th>First name</th>
+                            <th>Last name</th>
+                            <th>Position</th>
+                            <th>Department</th>
+                            <th>Full-time work</th>
+                            <th>Profile</th>
+                            <th>E-mail adress</th>
+                            <th data-orderable="false">Phone number</th>
                             <th class="text-center" data-orderable="false">Details</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>4587963</td>
-                            <td>2019.07.16<br> <small>15:00-23:00</small></td>
-                            <td>Wino i Grono</td>
-                            <td>Komunia</td>
-                            <td>24/18=42</td>
-                            <td>Wieńczysław Nieszczególny</td>
-                            <td class="text-right">12 500 PLN</td>
-                            <td><div class="status status-confirmed">ZATWIERDZONE</div></td>
+                            <td><span class="avatar bg-primary">JK</span></td>
+                            <td>Roman</td>
+                            <td>Waligóra</td>
+                            <td>Kierownik sali</td>
+                            <td>Kierownictwo</td>
+                            <td class="text-center"><i class="icon-check app-color-8"></i></td>
+                            <td>Admin</td>
+                            <td><a href="" class="gray-900">j.waligora@grapetownhotel.pl</a></td>
+                            <td class="no-wrap">569 589 589</td>
                             <td class="text-center px-8">
                                 <a href="" class="btn btn-light btn-lg px-16"><i class="icon-edit"></i></a>
                             </td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>4587963</td>
-                            <td>2019.07.16<br> <small>15:00-23:00</small></td>
-                            <td>Wino i Grono</td>
-                            <td>Komunia</td>
-                            <td>24/18=42</td>
-                            <td>Wieńczysław Nieszczególny</td>
-                            <td class="text-right">12 500 PLN</td>
-                            <td><div class="status status-new">NEW</div></td>
+                            <td><span class="avatar" style="background-image: url('./images/user.jpg')"></span></td>
+                            <td>Władysława</td>
+                            <td>Wąsacz</td>
+                            <td>Z-ca kierownika sali</td>
+                            <td>Kierownictwo</td>
+                            <td class="text-center"><i class="icon-minus app-color-9"></i></td>
+                            <td>Admin</td>
+                            <td><a href="" class="gray-900">j.wasacz@grapetownhotel.pl</a></td>
+                            <td class="no-wrap">796 036 902</td>
                             <td class="text-center px-8">
                                 <a href="" class="btn btn-light btn-lg px-16"><i class="icon-edit"></i></a>
                             </td>
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>4587963</td>
-                            <td>2019.07.16<br> <small>15:00-23:00</small></td>
-                            <td>Wino i Grono</td>
-                            <td>Komunia</td>
-                            <td>24/18=42</td>
-                            <td>Wieńczysław Nieszczególny</td>
-                            <td class="text-right">12 500 PLN</td>
-                            <td><div class="status status-paid">ZAPŁACONE</div></td>
+                            <td><span class="avatar" style="background-image: url('./images/user.jpg')"></span></td>
+                            <td>Edmund</td>
+                            <td>Buzdygan</td>
+                            <td>Z-ca kierownika sali</td>
+                            <td>Kierownictwo</td>
+                            <td class="text-center"><i class="icon-check app-color-8"></i></td>
+                            <td>Obsługa klienta</td>
+                            <td><a href="" class="gray-900">j.buzdygan@grapetownhotel.pl</a></td>
+                            <td class="no-wrap">586 582 582</td>
                             <td class="text-center px-8">
                                 <a href="" class="btn btn-light btn-lg px-16"><i class="icon-edit"></i></a>
                             </td>
                         </tr>
-                        <tr class="gray-400">
+                        <tr>
                             <td>4</td>
-                            <td>4587963</td>
-                            <td>2019.07.16<br> <small>15:00-23:00</small></td>
-                            <td>Wino i Grono</td>
-                            <td>Komunia</td>
-                            <td>24/18=42</td>
-                            <td>Wieńczysław Nieszczególny</td>
-                            <td class="text-right">12 500 PLN</td>
-                            <td><div class="status status-canceled">ODRZUCONE</div></td>
+                            <td><span class="avatar" style="background-image: url('./images/user.jpg')"></span></td>
+                            <td>Bronisław</td>
+                            <td>Wesołkiewicz-Baranowska</td>
+                            <td>Kelner</td>
+                            <td>Obsługa sali</td>
+                            <td class="text-center"><i class="icon-check app-color-8"></i></td>
+                            <td>Obsługa klienta</td>
+                            <td><a href="" class="gray-900">askawesolkiewicz@gmail.com</a></td>
+                            <td class="no-wrap">690 580 580</td>
                             <td class="text-center px-8">
                                 <a href="" class="btn btn-light btn-lg px-16"><i class="icon-edit"></i></a>
                             </td>
@@ -219,7 +221,7 @@
                         "info": false,
                         "paging": false,
                         "searching": false,
-                        "order": [[ 1, "desc" ]]
+                        "order": [[ 2, "desc" ]]
                     });
                 });
 
@@ -317,5 +319,5 @@
     </div>
 
 
-</body>
+<script type="text/javascript" src="js/app.min.js"></script></body>
 </html>
