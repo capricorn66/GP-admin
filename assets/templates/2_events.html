@@ -127,7 +127,7 @@
                     <span class="pl-md-32 d-none d-lg-inline-block">Showing 1-10 of 12</span>
                 </div>
                 <div class="ml-sm-auto mb-32">
-                    <button type="button" class="btn btn-link d-flex d-sm-inline-flex" data-toggle="modal" data-target="#addModal">
+                    <button type="button" class="btn btn-link d-flex d-sm-inline-flex" data-toggle="modal" data-target="#successModal">
                         <i class="icon-plus mr-8"></i> Add new event
                     </button>
                 </div>
@@ -161,7 +161,9 @@
                             <td class="text-right">12 500 PLN</td>
                             <td><div class="status status-confirmed">ZATWIERDZONE</div></td>
                             <td class="text-center px-8">
-                                <a href="" class="btn btn-light btn-lg px-16"><i class="icon-edit"></i></a>
+                                <button type="button" class="btn btn-light btn-lg px-16" data-toggle="modal" data-target="#successModal">
+                                    <i class="icon-edit"></i>
+                                </button>
                             </td>
                         </tr>
                         <tr>
@@ -175,7 +177,9 @@
                             <td class="text-right">12 500 PLN</td>
                             <td><div class="status status-new">NEW</div></td>
                             <td class="text-center px-8">
-                                <a href="" class="btn btn-light btn-lg px-16"><i class="icon-edit"></i></a>
+                                <button type="button" class="btn btn-light btn-lg px-16" data-toggle="modal" data-target="#dangerModal">
+                                    <i class="icon-edit"></i>
+                                </button>
                             </td>
                         </tr>
                         <tr>
@@ -189,7 +193,9 @@
                             <td class="text-right">12 500 PLN</td>
                             <td><div class="status status-paid">ZAPŁACONE</div></td>
                             <td class="text-center px-8">
-                                <a href="" class="btn btn-light btn-lg px-16"><i class="icon-edit"></i></a>
+                                <button type="button" class="btn btn-light btn-lg px-16" data-toggle="modal" data-target="#infoModal">
+                                    <i class="icon-edit"></i>
+                                </button>
                             </td>
                         </tr>
                         <tr class="gray-400">
@@ -203,7 +209,9 @@
                             <td class="text-right">12 500 PLN</td>
                             <td><div class="status status-canceled">ODRZUCONE</div></td>
                             <td class="text-center px-8">
-                                <a href="" class="btn btn-light btn-lg px-16"><i class="icon-edit"></i></a>
+                                <button type="button" class="btn btn-light btn-lg px-16" data-toggle="modal" data-target="#warningModal">
+                                    <i class="icon-edit"></i>
+                                </button>
                             </td>
                         </tr>
                     </tbody>
@@ -264,7 +272,6 @@
         </div>
     </main>
 
-
     <div class="bs4-xs d-block d-sm-none"></div>
     <div class="bs4-sm d-none d-sm-block d-md-none"></div>
     <div class="bs4-md d-none d-md-block d-lg-none"></div>
@@ -272,50 +279,69 @@
     <div class="bs4-xl d-none d-xl-block d-sl-none"></div>
     <div class="bs4-sl d-none d-sl-block"></div>
 
-    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="addModalLabel">Dodaj model</h5>
+    <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-alert">
+                <div class="modal-alert-icon">
+                    <i class="icon-check"></i>
+                </div>
+                <div class="modal-alert-body">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true"><span class="icon-close"></span></span>
                     </button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group mb-32">
-                        <label for="name18">Nazwa modelu</label>
-                        <input class="form-control" id="name18">
-                    </div>
-                    <div class="form-group mb-32">
-                        <label for="name19">Kategoria</label>
-                        <select class="form-control" id="name19">
-                            <option selected>-- wybierz --</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Anuluj</button>
-                    <button type="button" class="btn btn-primary">ZAPISZ</button>
+                    <p>Komunikat potwierdzający wykonaną operację</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="removeModalLabel" aria-hidden="true">
+    <div class="modal fade" id="dangerModal" tabindex="-1" role="dialog" aria-labelledby="dangerModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body text-center my-24">
-                    <h5 class="h3 mb-32">Czy na pewno chcesz usunąć?</h5>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Anuluj</button>
-                    <button type="button" class="btn btn-primary">ZAPISZ</button>
+            <div class="modal-alert">
+                <div class="modal-alert-icon">
+                    <i class="icon-danger"></i>
+                </div>
+                <div class="modal-alert-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><span class="icon-close"></span></span>
+                    </button>
+                    <p>Komunikat potwierdzający wykonaną operację</p>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-alert">
+                <div class="modal-alert-icon">
+                    <i class="icon-info"></i>
+                </div>
+                <div class="modal-alert-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><span class="icon-close"></span></span>
+                    </button>
+                    <p>Komunikat potwierdzający wykonaną operację</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="warningModal" tabindex="-1" role="dialog" aria-labelledby="warningModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-alert">
+                <div class="modal-alert-icon">
+                    <i class="icon-warning"></i>
+                </div>
+                <div class="modal-alert-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><span class="icon-close"></span></span>
+                    </button>
+                    <p>Komunikat potwierdzający wykonaną operację</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>

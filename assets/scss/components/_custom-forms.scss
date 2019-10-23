@@ -401,6 +401,8 @@ select.custom-select {
 
 .custom-control-label {
   min-height: 2.4rem;
+  line-height: 1.4em;
+  font-size: 16px;
   &::before {
     width: 2rem;
     height: 2rem;

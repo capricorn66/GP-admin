@@ -40,10 +40,10 @@
 }
 
 .white {
-  color: $white;
+  color: $white !important;
 }
 .black {
-  color: $black;
+  color: $black !important;
 }
 
 .gray-100 {
@@ -364,7 +364,9 @@
 .font-14 {
   font-size: 14px !important;
 }
-
+.font-16 {
+  font-size: 16px !important;
+}
 .font-24 {
   font-size: 24px !important;
 }

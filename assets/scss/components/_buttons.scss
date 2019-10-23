@@ -22,12 +22,12 @@ button {
     user-select: none;
     border: 0 solid transparent;
     height: $input-btn-height;
-    @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size-base !important, $btn-line-height, $btn-border-radius);
+    @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size-base, $btn-line-height, $btn-border-radius);
     @include transition($btn-transition);
 
     input {
         min-height: $input-btn-height - .2rem;
-        @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size-base !important, $btn-line-height, $btn-border-radius);
+        @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size-base, $btn-line-height, $btn-border-radius);
     }
 
     // Share hover and focus styles
@@ -51,6 +51,27 @@ button {
     // Opinionated: add "hand" cursor to non-disabled .btn elements
     &:not(:disabled):not(.disabled) {
         cursor: pointer;
+    }
+
+    &.btn-tab {
+        border-radius: 0;
+        font-size: 16px !important;
+        padding-left: 16px;
+        padding-right: 16px;
+        background-color: $white;
+        display: -ms-flexbox;
+        display: flex;
+        margin-bottom: 4px;
+        justify-content: start;
+        text-align: left;
+        &.active,
+        &.active:hover {
+            background-color: $gray-900;
+            color: $white;
+        }
+        &:hover {
+            background-color: $gray-300;
+        }
     }
 
     &.btn-status {
@@ -250,21 +271,20 @@ fieldset:disabled a.btn {
 
 .btn-lg {
     height: $input-btn-height-lg;
-    @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg !important, $btn-line-height-lg, $btn-border-radius-lg);
+    @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
     input {
         min-height: $input-btn-height-lg - .2rem;
-        @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg !important, $btn-line-height-lg, $btn-border-radius-lg);
+        @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
     }
-    font-size: 20px !important;
 }
 
 .btn-sm {
     height: $input-btn-height-sm;
     padding-top: 1px !important;
-    @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm !important, $btn-line-height-sm, $btn-border-radius-sm);
+    @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
     input {
         min-height: $input-btn-height-sm - .2rem;
-        @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm !important, $btn-line-height-sm, $btn-border-radius-sm);
+        @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
     }
 }
 
