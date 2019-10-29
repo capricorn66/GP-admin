@@ -26,7 +26,6 @@
 
 <body itemscope itemtype="http://schema.org/WebPage">
 
-
     <aside class="sidebar" id="sidebar-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
         <div class="sidebar-head">
             <h1><a class="navbar-brand" href="/#/"><img src="./images/GrapeTown.svg" alt=""></a></h1>
@@ -131,37 +130,38 @@
                 <div class="box-block-body bg-gray-200 py-0">
                     <div class="row justify-content-center">
                         <div class="col-lg-4">
-                            <a href="" class="btn btn-default active">Natural person</a>
-                            <a href="" class="btn btn-default">Company</a>
+                            <div class="nav" role="tablist">
+                                <a class="btn btn-default active mx-1" id="person-tab" data-toggle="tab" href="#person" role="tab" aria-controls="person" aria-selected="true">Natural person</a>
+                                <a class="btn btn-default mx-1" id="company-tab" data-toggle="tab" href="#company" role="tab" aria-controls="company" aria-selected="false">Company</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="box-block">
+            <div class="box-block fade show active" id="person" role="tabpanel" aria-labelledby="person-tab">
                 <div class="box-block-body bg-gray-100 py-48">
 
                     <div class="row justify-content-center">
                         <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4">
                             <div class="form-group mb-32">
-                                <label for="form-control1">First name</label>
-                                <input type="text" class="form-control" id="form-control1" placeholder="">
+                                <label for="form-control-person_1">First name</label>
+                                <input type="text" class="form-control" id="form-control-person_1" placeholder="">
                             </div>
                         </div>
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4">
                             <div class="form-group mb-32">
-                                <label for="form-control2">Last name</label>
-                                <input type="text" class="form-control" id="form-control2" placeholder="">
+                                <label for="form-control-person_2">Last name</label>
+                                <input type="text" class="form-control" id="form-control-person_2" placeholder="">
                             </div>
                         </div>
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4">
                             <div class="form-group mb-32">
-                                <label for="form-control3">Address</label>
-                                <input type="text" class="form-control" id="form-control3" placeholder="">
+                                <label for="form-control-person_3">Address</label>
+                                <input type="text" class="form-control" id="form-control-person_3" placeholder="">
                             </div>
                         </div>
                     </div>
@@ -170,8 +170,8 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group mb-32">
-                                        <label for="form-control4">Postal code</label>
-                                        <input type="text" class="form-control" id="form-control4" placeholder="">
+                                        <label for="form-control-person_4">Postal code</label>
+                                        <input type="text" class="form-control" id="form-control-person_4" placeholder="">
                                     </div>
                                 </div>
                             </div>
@@ -180,8 +180,8 @@
                     <div class="row justify-content-center">
                         <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4">
                             <div class="form-group mb-32">
-                                <label for="form-control6">City</label>
-                                <select class="form-control" id="form-control6">
+                                <label for="form-control-person_6">City</label>
+                                <select class="form-control" id="form-control-person_6">
                                     <option selected="">Choose...</option>
                                     <option value="1">Palędzie</option>
                                     <option value="2">Palędzie</option>
@@ -195,8 +195,8 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group mb-32">
-                                        <label for="form-control5">Phone number (optional)</label>
-                                        <input type="text" class="form-control" id="form-control5" placeholder="">
+                                        <label for="form-control-person_5">Phone number (optional)</label>
+                                        <input type="text" class="form-control" id="form-control-person_5" placeholder="">
                                     </div>
                                 </div>
                             </div>
@@ -205,8 +205,106 @@
                     <div class="row justify-content-center mb-32">
                         <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4">
                             <div class="form-group mb-32">
-                                <label for="form-control7">E-mail (login)</label>
-                                <input type="email" class="form-control" id="form-control7" placeholder="">
+                                <label for="form-control-person_7">E-mail (login)</label>
+                                <input type="email" class="form-control" id="form-control-person_7" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4">
+                            <button type="submit" class="btn btn-primary">SAVE</button>
+                            <a href="" class="btn btn-link">Cancel</a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="box-block fade" id="company" role="tabpanel" aria-labelledby="company-tab">
+                <div class="box-block-body bg-gray-100 py-48">
+
+                    <div class="row justify-content-center">
+                        <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4">
+                            <div class="form-group mb-32">
+                                <label for="form-control-company_1">First name</label>
+                                <input type="text" class="form-control" id="form-control-company_1" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4">
+                            <div class="form-group mb-32">
+                                <label for="form-control-company_2">Last name</label>
+                                <input type="text" class="form-control" id="form-control-company_2" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4">
+                            <div class="form-group mb-32">
+                                <label for="form-control-company_8">Company name</label>
+                                <input type="text" class="form-control" id="form-control-company_8" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4">
+                            <div class="form-group mb-32">
+                                <label for="form-control-company_9">NIP</label>
+                                <input type="text" class="form-control" id="form-control-company_9" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4">
+                            <div class="form-group mb-32">
+                                <label for="form-control-company_3">Address</label>
+                                <input type="text" class="form-control" id="form-control-company_3" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group mb-32">
+                                        <label for="form-control-company_4">Postal code</label>
+                                        <input type="text" class="form-control" id="form-control-company_4" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4">
+                            <div class="form-group mb-32">
+                                <label for="form-control-company_6">City</label>
+                                <select class="form-control" id="form-control-company_6">
+                                    <option selected="">Choose...</option>
+                                    <option value="1">Palędzie</option>
+                                    <option value="2">Palędzie</option>
+                                    <option value="3">Palędzie</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group mb-32">
+                                        <label for="form-control-company_5">Phone number (optional)</label>
+                                        <input type="text" class="form-control" id="form-control-company_5" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center mb-32">
+                        <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4">
+                            <div class="form-group mb-32">
+                                <label for="form-control-company_7">E-mail (login)</label>
+                                <input type="email" class="form-control" id="form-control-company_7" placeholder="">
                             </div>
                         </div>
                     </div>
@@ -225,58 +323,12 @@
         </div>
     </main>
 
-
     <div class="bs4-xs d-block d-sm-none"></div>
     <div class="bs4-sm d-none d-sm-block d-md-none"></div>
     <div class="bs4-md d-none d-md-block d-lg-none"></div>
     <div class="bs4-lg d-none d-lg-block d-xl-none"></div>
     <div class="bs4-xl d-none d-xl-block d-sl-none"></div>
     <div class="bs4-sl d-none d-sl-block"></div>
-
-    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="addModalLabel">Dodaj model</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><span class="icon-close"></span></span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group mb-32">
-                        <label for="name18">Nazwa modelu</label>
-                        <input class="form-control" id="name18">
-                    </div>
-                    <div class="form-group mb-32">
-                        <label for="name19">Kategoria</label>
-                        <select class="form-control" id="name19">
-                            <option selected>-- wybierz --</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Anuluj</button>
-                    <button type="button" class="btn btn-primary">ZAPISZ</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="removeModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body text-center my-24">
-                    <h5 class="h3 mb-32">Czy na pewno chcesz usunąć?</h5>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Anuluj</button>
-                    <button type="button" class="btn btn-primary">ZAPISZ</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
 <script type="text/javascript" src="js/app.min.js"></script></body>
 </html>
