@@ -104,6 +104,7 @@ $(document).ready( function() {
 
     $('.single-date-picker').daterangepicker({
         singleDatePicker: true,
+        autoUpdateInput: false,
         startDate: '+1d',
         cancelClass: "btn-secondary",
         parentEl: '#view',
