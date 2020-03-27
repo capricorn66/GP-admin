@@ -103,7 +103,7 @@ export function sidebarInit() {
     };
 
     const swipeToggle = debounce(function() {
-        if ( (rwdMedia.bs4_xs() || rwdMedia.bs4_sm() || rwdMedia.bs4_md() || rwdMedia.bs4_lg()) && $sidebar.hasClass('sidebar-state-opened') ) {
+        if ( (rwdMedia.xs() || rwdMedia.sm() || rwdMedia.md() || rwdMedia.lg()) && $sidebar.hasClass('sidebar-state-opened') ) {
             initSideBarSwipe();
         } else {
             $('body').swipe('destroy');

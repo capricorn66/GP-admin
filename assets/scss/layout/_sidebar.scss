@@ -2,10 +2,7 @@ body {
   overflow: hidden;
 }
 .sidebar {
-  width: 280px;
-  @media screen and (min-width: 1440px) {
-    width: 330px;
-  }
+  width: 240px;
   color: $black;
   font-family: $headings-font-family;
   z-index: $zindex-aside;

@@ -1,23 +1,16 @@
-// vendor: JQuery v3.4.1
-import JQuery from 'jquery';
-window.$ = window.JQuery = JQuery;
+// JavaScript Document
 
-// vendor: Bootstrap v4.3.1 (https://getbootstrap.com/) with popper v1.14.7
+import $ from "jquery";
 import 'popper.js';
 import 'bootstrap';
 
-// rwdMedia
-import rwdMedia from './js/rwdMedia.js';
+import {rwdMedia} from "./rwdMedia";
+import {wavesInit} from './waves.js';
+import {bodyLock} from './body-lock.js';
+
 window.rwdMedia = rwdMedia;
-
-// waves
-import {wavesInit} from './js/waves.js';
 window.wavesInit = wavesInit;
-
-// bodyLock
-import {bodyLock} from './js/body-lock.js';
 window.bodyLock = bodyLock;
-
 
 function tagglePass(elem) {
     const $this = $(elem);
@@ -43,7 +36,3 @@ $(document).ready( function() {
     wavesInit();
 
 });
-
-
-
-import './scss/app-io.scss';

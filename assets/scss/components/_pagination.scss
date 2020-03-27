@@ -69,8 +69,6 @@
 }
 
 .page-item {
-  margin-left: 8px;
-  margin-right: 8px;
   &:first-child {
       margin-left: 0;
   }
@@ -82,7 +80,7 @@
     z-index: 1;
     background-color: $gray-500;
     color: $white;
-    font-weight: bold;
+    font-weight: 400;
     &:hover {
       background-color: $gray-500;
       color: $white;

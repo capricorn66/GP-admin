@@ -15,7 +15,7 @@ function generateHtmlPlugins(templateDir) {
         const name = parts[0];
         return new HtmlWebpackPlugin({
             filename: `${name}.html`,
-            chunks: [ templateDir === 'templates' ? 'app' : 'appIO'],
+            chunks: templateDir === 'templates' ? ['script', 'vendor', 'style'] : ['scriptIO', 'vendor', 'styleIO'],
             template: `./assets/${templateDir}/${name}.html`,
         });
     });
@@ -32,8 +32,10 @@ module.exports = (env, options) => {
     return {
 
         entry: {
-            app: './assets/app.js',
-            appIO: './assets/app-io.js',
+            script: './assets/js/app.js',
+            scriptIO: './assets/js/app-io.js',
+            style: './assets/scss/app.scss',
+            styleIO: './assets/scss/app-io.scss',
         },
 
         output: {
@@ -60,10 +62,33 @@ module.exports = (env, options) => {
                 new OptimizeCSSAssetsPlugin({}),
                 new UglifyJsPlugin(),
             ],
+            splitChunks: {
+                cacheGroups: {
+                    vendor: {
+                        test: /node_modules/,
+                        chunks: 'initial',
+                        name: 'vendor',
+                        enforce: true
+                    },
+                },
+                chunks: 'all',
+            }
         },
 
         module: {
             rules: [
+                {
+                    test: require.resolve('jquery'),
+                    use: [{
+                        loader: 'expose-loader',
+                        options: 'jQuery'
+                    },
+                        {
+                            loader: 'expose-loader',
+                            options: '$'
+                        }
+                    ]
+                },
                 {
                     test: /\.js$/,
                     exclude: /node-modules/,
@@ -99,24 +124,18 @@ module.exports = (env, options) => {
                     ]
                 },
                 {
-                    test: /\.(svg|eot|ttf|woff|woff2)$/,
-                    include: [
-                        path.resolve(__dirname, 'assets/icomoon/fonts/'),
-                    ],
+                    test: /\.(woff|woff2)$/,
                     use: {
                         loader: "url-loader",
                         options: {
                             limit: 10000,
                             publicPath: path.resolve(__dirname, 'fonts'),
-                            name: "fonts/[name].[ext]",
+                            name: "fonts/[name].[ext]?[hash:6]",
                         }
                     }
                 },
                 {
                     test: /\.(svg|png|jpg|gif)$/,
-                    include: [
-                        path.resolve(__dirname, 'assets/images'),
-                    ],
                     use: {
                         loader: "file-loader",
                         options: {

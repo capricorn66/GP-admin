@@ -38,10 +38,6 @@ main {
         @include media-breakpoint-up(xl) {
             padding: 20px 40px;
         }
-        @media screen and (min-width: 1819px) {
-            padding-left: calc( (100vw - (1408px + 330px)) / 2 ) !important;
-            padding-right: calc( (100vw - (1408px + 330px)) / 2 ) !important;
-        }
 
         > h2:not(:first-child) {
             margin-top: 6rem;

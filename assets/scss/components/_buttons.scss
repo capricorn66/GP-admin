@@ -22,9 +22,10 @@ button {
     user-select: none;
     border: 0 solid transparent;
     height: $input-btn-height;
+    min-width: $input-btn-height;
     @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size-base, $btn-line-height, $btn-border-radius);
     @include transition($btn-transition);
-
+    padding-bottom: 1px !important;
     input {
         min-height: $input-btn-height - .2rem;
         @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size-base, $btn-line-height, $btn-border-radius);
@@ -113,7 +114,6 @@ button {
             box-shadow: 0 0 0 1px $app-color-6 inset;
         }
     }
-
 
     &.btn-primary-light {
         background-color: rgba($app-color-7,.2);
@@ -270,6 +270,7 @@ fieldset:disabled a.btn {
 
 .btn-lg {
     height: $input-btn-height-lg;
+    min-width: $input-btn-height-lg;
     @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
     input {
         min-height: $input-btn-height-lg - .2rem;
@@ -279,6 +280,7 @@ fieldset:disabled a.btn {
 
 .btn-sm {
     height: $input-btn-height-sm;
+    min-width: $input-btn-height-sm;
     padding-top: 1px !important;
     @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
     input {
