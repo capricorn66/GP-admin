@@ -224,6 +224,9 @@ fieldset:disabled a.btn {
     color: $gray-900;
     background-color: transparent;
     transition: none;
+    i {
+        margin-top: -2px;
+    }
     @include hover {
         text-decoration: none;
         background-color: $gray-300;

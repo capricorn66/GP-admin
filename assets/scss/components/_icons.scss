@@ -23,6 +23,9 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-file-pdf:before {
+  content: "\e91b";
+}
 .icon-minus:before {
   content: "\e91a";
 }

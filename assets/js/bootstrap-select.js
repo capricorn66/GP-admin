@@ -29,7 +29,7 @@
 
             function toggler() {
                 $parentBlock.toggleClass(bsOpenedClass);
-                if (rwdMedia.bs4_md() || rwdMedia.bs4_sm() || rwdMedia.bs4_xs()) {
+                if (rwdMedia.md() || rwdMedia.sm() || rwdMedia.xs()) {
                     bodyLock();
                 }
             }
@@ -132,7 +132,7 @@
 
                 $(window).on('resize', function() {
                     if ($parentBlock.hasClass(bsOpenedClass)) {
-                        if (rwdMedia.bs4_md() || rwdMedia.bs4_sm() || rwdMedia.bs4_xs()) {
+                        if (rwdMedia.md() || rwdMedia.sm() || rwdMedia.xs()) {
                             bodyLock();
                         }
                     }

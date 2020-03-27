@@ -139,58 +139,159 @@
                 </div>
             </div>
 
-            <div class="table-responsive mb-16">
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th>Date of reservation</th>
-                        <th>Room</th>
-                        <th>Type of event</th>
-                        <th>Adults/children</th>
-                        <th>Customer</th>
-                        <th class="text-right">Calculated price</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>2019.07.16<br> <small>15:00-23:00</small></td>
-                        <td>Wino i Grono</td>
-                        <td>Urodziny</td>
-                        <td>24/18=42</td>
-                        <td>Legia Warszawa</td>
-                        <td class="text-right">12 500 PLN</td>
-                    </tr>
-                    </tbody>
-                </table>
+            <div class="row">
+                <div class="col-lg-6">
+
+                    <div class="box-block h-100">
+                        <div class="box-block-header">
+                            <div>Select customer</div>
+                        </div>
+                        <div class="box-block-body">
+                            <div class="row flex-column flex-sm-row align-items-sm-center">
+                                <div class="col-lg-4">
+                                    <input type="text" class="form-control" id="" placeholder="- type to search -">
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="text-right">
+                                        <a href="" class="btn btn-link d-flex d-sm-inline-flex">
+                                            <i class="icon-plus mr-8"></i> Add new customer
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-6">
+                    <div class="box-block h-100">
+                        <div class="box-block-header">
+                            <div>Calculated price</div>
+                        </div>
+                        <div class="box-block-body">
+                            <strong class="font-32">25 250,00</strong> PLN
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="box-block h-100">
+                        <div class="box-block-header">
+                            <div>Date and time</div>
+                        </div>
+                        <div class="box-block-body pb-8">
+                            <div class="d-flex">
+                                <div class="form-inline">
+                                    <div class="form-group mb-16">
+                                        <input type="text" class="form-control form-control-calendar js-single-date-time-picker" id="input1-date-time-picker" placeholder="wybierz">
+                                    </div>
+                                    <span class="mb-16 mx-16">
+                                        do
+                                    </span>
+                                    <div class="form-group mb-16">
+                                        <input type="text" class="form-control form-control-calendar js-single-date-time-picker" id="input2-date-time-picker" placeholder="wybierz">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="box-block h-100">
+                        <div class="box-block-header">
+                            <div>Type of event</div>
+                        </div>
+                        <div class="box-block-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <select class="form-control" id="exampleInputEmail2">
+                                        <option selected="">Choose...</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="box-block h-100">
+                        <div class="box-block-header">
+                            <div>Number of participants</div>
+                        </div>
+                        <div class="box-block-body pb-8">
+                            <div class="d-flex">
+                                <div class="form-inline">
+                                    <div class="form-group mb-16">
+                                        <input type="text" class="form-control mr-8" size="2">
+                                        <label for="">Adults</label>
+                                    </div>
+                                    <div class="form-group mb-16 ml-32">
+                                        <input type="text" class="form-control mr-8" size="2">
+                                        <label for="">Children</label>
+                                    </div>
+                                </div>
+                                <div class="ml-auto">
+                                    <strong class="font-32">56</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="box-block h-100">
+                        <div class="box-block-header">
+                            <div>Room</div>
+                        </div>
+                        <div class="box-block-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <select class="form-control">
+                                        <option selected>Choose...</option>
+                                        <option value="1">Menu w cenie 280 PLN/osobę</option>
+                                        <option value="2">Menu w cenie 280 PLN/osobę</option>
+                                        <option value="3">Menu w cenie 280 PLN/osobę</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="box-block">
                 <div class="box-block-header d-flex flex-column flex-sm-row align-items-sm-center">
                     <div>Menu</div>
                     <div class="ml-sm-auto">
-                        <small class="mr-16">Total menu price</small>
-                        54 osoby x 280 PLN = 15 120 PLN
+                        Total menu price
+                        <strong class="ml-16 font-16 gray-900">54 osoby x 280 PLN = 15 120 PLN</strong>
                     </div>
                 </div>
-                <div class="box-block-body py-24">
-                    <div class="d-flex flex-column flex-sm-row align-items-sm-center">
-                        <div class="d-flex">
+                <div class="box-block-body">
+                    <div class="row flex-column flex-sm-row align-items-sm-center">
+                        <div class="col-lg-4">
                             <select class="form-control" id="exampleInputEmail3">
                                 <option selected>Choose...</option>
                                 <option value="1">Menu w cenie 280 PLN/osobę</option>
                                 <option value="2">Menu w cenie 280 PLN/osobę</option>
                                 <option value="3">Menu w cenie 280 PLN/osobę</option>
                             </select>
-                            <a href="#" class="btn btn-light d-flex d-sm-inline-flex ml-24">UPDATE</a>
                         </div>
-                        <div class="ml-sm-auto d-flex">
-                            <button class="btn btn-accordion" type="button" data-toggle="collapse" data-target="#collapseBox" aria-expanded="false" aria-controls="collapseExample">
-                                <span>Show selected menu</span>
-                                <span>Hide selected menu</span>
-                            </button>
+                        <div class="col-lg-8 d-flex">
+                            <div class="ml-auto">
+                                <button class="btn btn-accordion" type="button" data-toggle="collapse" data-target="#collapseBox" aria-expanded="false" aria-controls="collapseExample">
+                                    <span>Show selected menu</span>
+                                    <span>Hide selected menu</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
-
                     <div class="collapse" id="collapseBox">
                         <div class="row justify-content-center">
                             <div class="col-lg-6">
@@ -249,101 +350,121 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
 
-            <div class="box-block">
-                <div class="box-block-header d-flex flex-column flex-sm-row align-items-sm-center">
-                    <div>Additional services</div>
-                    <div class="ml-sm-auto">
-                        <small class="mr-16">Total price of additional services</small>
-                        10 130 PLN
+            <div class="row">
+                <div class="col-lg-6 mb-32">
+                    <div class="box-block">
+                        <div class="box-block-header d-flex flex-column flex-sm-row align-items-sm-center">
+                            <div>Additional services</div>
+                            <div class="ml-sm-auto">
+                                Total price of additional services
+                                <strong class="ml-16 font-16 gray-900">10 130 PLN</strong>
+                            </div>
+                        </div>
+                        <div class="box-block-body">
+
+                            <div class="mb-32">
+                                <div class="px-sm-16">
+                                    <div class="custom-control custom-checkbox mb-16">
+                                        <input type="checkbox" class="custom-control-input" id="customControl1">
+                                        <label class="custom-control-label" for="customControl1">Ścianka komunijna do zdjęć 3D Grape Town Hotel <span class="pl-3 gray-500">15 PLN</span></label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox mb-16">
+                                        <input type="checkbox" class="custom-control-input" id="customControl2">
+                                        <label class="custom-control-label" for="customControl2">Dodatkowe dekoracje kwiatowe <span class="pl-3 gray-500">280 PLN</span></label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox mb-16">
+                                        <input type="checkbox" class="custom-control-input" id="customControl3">
+                                        <label class="custom-control-label" for="customControl3">Grape Town Bowling Club - najnowocześniejsza kręgielnia w Europie <span class="pl-3 gray-500">88 PLN</span></label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-32">
+                                <div class="d-flex px-16 py-8 mb-16 bg-gray-200">
+                                    Pokoje gościnne o podwyższonym standardzie
+                                    <div class="ml-sm-auto">
+                                        Ilość
+                                    </div>
+                                </div>
+                                <div class="px-sm-16">
+                                    <div class="d-flex mb-16 align-items-center">
+                                        <div class="custom-control custom-checkbox mr-8">
+                                            <input type="checkbox" class="custom-control-input" id="customControl4">
+                                            <label class="custom-control-label" for="customControl4">2-osobowy z parkingiem + śniadanie <span class="pl-3 gray-500">320 PLN</span></label>
+                                        </div>
+                                        <div class="ml-auto">
+                                            <input type="text" class="form-control form-control-sm text-center" size="2">
+                                        </div>
+                                    </div>
+                                    <div class="d-flex mb-16 align-items-center">
+                                        <div class="custom-control custom-checkbox mr-8">
+                                            <input type="checkbox" class="custom-control-input" id="customControl5">
+                                            <label class="custom-control-label" for="customControl5">1-osobowy z parkingiem + śniadanie <span class="pl-3 gray-500">280 PLN</span></label>
+                                        </div>
+                                        <div class="ml-auto">
+                                            <input type="text" class="form-control form-control-sm text-center" size="2">
+                                        </div>
+                                    </div>
+                                    <div class="d-flex mb-16 align-items-center">
+                                        <div class="custom-control custom-checkbox mr-8">
+                                            <input type="checkbox" class="custom-control-input" id="customControl6">
+                                            <label class="custom-control-label" for="customControl6">Dostawka <span class="pl-3 gray-500">100 PLN</span></label>
+                                        </div>
+                                        <div class="ml-auto">
+                                            <input type="text" class="form-control form-control-sm text-center" size="2">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-                <div class="box-block-body">
-
-                    <div class="row mb-32">
-                        <div class="col-lg-6">
-                            <div class="px-sm-16">
-                                <div class="custom-control custom-checkbox mb-16">
-                                    <input type="checkbox" class="custom-control-input" id="customControl1">
-                                    <label class="custom-control-label" for="customControl1">Ścianka komunijna do zdjęć 3D Grape Town Hotel</label>
-                                </div>
-                                <div class="custom-control custom-checkbox mb-16">
-                                    <input type="checkbox" class="custom-control-input" id="customControl2">
-                                    <label class="custom-control-label" for="customControl2">Dodatkowe dekoracje kwiatowe</label>
-                                </div>
-                                <div class="custom-control custom-checkbox mb-16">
-                                    <input type="checkbox" class="custom-control-input" id="customControl3">
-                                    <label class="custom-control-label" for="customControl3">Grape Town Bowling Club - najnowocześniejsza kręgielnia w Europie</label>
+                <div class="col-lg-6 mb-32">
+                    <div class="box-block">
+                        <div class="box-block-header">
+                            <div>Arrangement of tables</div>
+                        </div>
+                        <div class="box-block-body">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <select class="form-control">
+                                        <option selected>Choose...</option>
+                                        <option value="1">Menu w cenie 280 PLN/osobę</option>
+                                        <option value="2">Menu w cenie 280 PLN/osobę</option>
+                                        <option value="3">Menu w cenie 280 PLN/osobę</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="row mb-32">
-                        <div class="col-lg-6">
-                            <div class="d-flex px-16 py-8 mb-16 bg-gray-100">
-                                Pokoje gościnne o podwyższonym standardzie
-                                <div class="ml-sm-auto">
-                                    Ilość
-                                </div>
-                            </div>
-                            <div class="px-sm-16">
-                                <div class="d-flex mb-16 align-items-center">
-                                    <div class="custom-control custom-checkbox mr-8">
-                                        <input type="checkbox" class="custom-control-input" id="customControl4">
-                                        <label class="custom-control-label" for="customControl4">2-osobowy z parkingiem + śniadanie</label>
-                                    </div>
-                                    <div class="ml-auto">
-                                        <input type="text" class="form-control form-control-sm text-center" style=" width: 40px;">
-                                    </div>
-                                </div>
-                                <div class="d-flex mb-16 align-items-center">
-                                    <div class="custom-control custom-checkbox mr-8">
-                                        <input type="checkbox" class="custom-control-input" id="customControl5">
-                                        <label class="custom-control-label" for="customControl5">1-osobowy z parkingiem + śniadanie</label>
-                                    </div>
-                                    <div class="ml-auto">
-                                        <input type="text" class="form-control form-control-sm text-center" style=" width: 40px;">
-                                    </div>
-                                </div>
-                                <div class="d-flex mb-16 align-items-center">
-                                    <div class="custom-control custom-checkbox mr-8">
-                                        <input type="checkbox" class="custom-control-input" id="customControl6">
-                                        <label class="custom-control-label" for="customControl6">Dostawka</label>
-                                    </div>
-                                    <div class="ml-auto">
-                                        <input type="text" class="form-control form-control-sm text-center" style=" width: 40px;">
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="box-block">
+                        <div class="box-block-header">
+                            <div>Additional notes</div>
+                        </div>
+                        <div class="box-block-body">
+                            <textarea class="form-control" rows="5"></textarea>
                         </div>
                     </div>
-
-                    <a href="#" class="btn btn-light d-flex d-sm-inline-flex ml-sm-24">UPDATE</a>
-
                 </div>
             </div>
 
+            <div class="mb-40">
+                <a href="" class="btn btn-primary">SAVE</a>
+                <a href="" class="btn btn-link">Cancel</a>
+            </div>
+
             <div class="box-block">
-                <div class="box-block-header">
-                    <div>Arrangement of tables</div>
-                </div>
-                <div class="box-block-body">
+                <div class="box-block-header bg-gray-300">
                     <div class="d-flex align-items-center">
-                        <img src="./images/ustawienie.png" alt="" class="img-selected">
-                        <a href="#" class="btn btn-light d-flex d-sm-inline-flex ml-24">CHANGE</a>
+                        <h3 class="mr-48">Assign employees</h3>
+                        <a href="" class="btn-link gray-600"><i class="icon-file-pdf font-20 mr-8"></i> Employees assignment</a>
                     </div>
                 </div>
-            </div>
-
-            <div class="box-block">
-                <div class="box-block-header bg-gray-800 white">
-                    <div>Assign employees</div>
-                </div>
-                <div class="box-block-body py-8">
+                <div class="box-block-body py-0">
 
                     <div class="d-flex flex-column flex-sm-row align-items-sm-center py-8">
                         <div class="d-flex">
@@ -355,24 +476,28 @@
                             </a>
                         </div>
                     </div>
+
+                </div>
+                <div class="box-block-body py-0 bg-gray-100">
+
                     <div class="collapse mx-n16" id="collapseUser1">
                         <div class="d-flex flex-column flex-sm-row align-items-sm-center px-16 py-16 bg-gray-100">
                             <div class="d-flex">
-
-                                <a class="avatar-link" href="#">
-                                    <span class="avatar mr-16" style="background-image: url('./images/user.jpg')"></span>
-                                    <span class="avatar-name">
-                                        Jan Kowalski<br>
-                                        <small>Kierownik sali</small>
-                                    </span>
-                                </a>
-
+                                <select class="form-control" id="exampleInputEmail10">
+                                    <option selected>Choose...</option>
+                                    <option value="1">Menu w cenie 280 PLN/osobę</option>
+                                    <option value="2">Menu w cenie 280 PLN/osobę</option>
+                                    <option value="3">Menu w cenie 280 PLN/osobę</option>
+                                </select>
                             </div>
                             <div class="ml-sm-auto">
                                 <a href="" class="btn btn-link"><i class="icon-user-remove mr-8 font-24 gray-600"></i> <span class="gray-600">Remove</span></a>
                             </div>
                         </div>
                     </div>
+
+                </div>
+                <div class="box-block-body py-0">
 
                     <div class="d-flex flex-column flex-sm-row align-items-sm-center py-8">
                         <div class="d-flex">
@@ -384,23 +509,26 @@
                             </a>
                         </div>
                     </div>
+
+                </div>
+                <div class="box-block-body py-0 bg-gray-100">
+
                     <div class="collapse mx-n16" id="collapseUser2">
                         <div class="d-flex flex-column flex-sm-row align-items-sm-center px-16 py-16 bg-gray-100">
                             <div class="d-flex">
-
-
+                                <select class="form-control" id="exampleInputEmail20">
+                                    <option selected>Choose...</option>
+                                    <option value="1">Menu w cenie 280 PLN/osobę</option>
+                                    <option value="2">Menu w cenie 280 PLN/osobę</option>
+                                    <option value="3">Menu w cenie 280 PLN/osobę</option>
+                                </select>
                             </div>
                             <div class="ml-sm-auto">
                                 <a href="" class="btn btn-link"><i class="icon-user-remove mr-8 font-24 gray-600"></i> <span class="gray-600">Remove</span></a>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="box-block">
-                <div class="box-block-body bg-gray-200 py-0">
-                    <a href="" class="btn btn-primary">INVITE</a>
                 </div>
             </div>
 

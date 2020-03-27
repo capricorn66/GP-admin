@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="imagetoolbar" content="no">
+    <![endif]-->
+
+    <meta name="Description" content="" />
+    <meta name="Keywords" content="" />
+    <meta name="distribution" content="Global" />
+    <meta name="msapplication-config" content="none"/>
+    <meta name="copyright" content="© eurekamedia.pl" />
+
+    <meta name="robots" content="noindex, nofollow"/>
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="title" content="POLSET admin panel">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap&subset=latin-ext" rel="stylesheet">
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+
+
+    <aside class="sidebar" id="sidebar-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+        <div class="sidebar-head">
+            <h1><a class="navbar-brand" href="/#/"><img src="./images/GrapeTown.svg" alt=""></a></h1>
+            <button type="button" class="close ml-auto d-xl-none" data-toggle="sidebar" data-target="#sidebar-nav" aria-expanded="false" aria-controls="aside-nav">
+                <span aria-hidden="true"></span>
+            </button>
+        </div>
+        <div class="sidebar-body">
+            <ul class="nav nav-sidebar" id="accordion-nav">
+                <li class="nav-section">
+                    <h4 class="nav-section-link">
+                        <a class="nav-link active" href="#" data-navigo="" role="button">
+                            <i class="icon-dashboard"></i> Dashboard
+                        </a>
+                    </h4>
+                </li>
+                <li class="nav-section">
+                    <h4 class="nav-section-link">
+                        <a class="nav-link" href="#" data-navigo="" role="button">
+                            <i class="icon-calendar"></i> Calendar
+                        </a>
+                    </h4>
+                </li>
+                <li class="nav-section">
+                    <h4 class="nav-section-link">
+                        <a class="nav-link" href="#" data-navigo="" role="button">
+                            <i class="icon-events"></i> Events <sup class="badge">2</sup>
+                        </a>
+                    </h4>
+                </li>
+                <li class="nav-section">
+                    <h4 class="nav-section-link">
+                        <a class="nav-link" href="#" data-navigo="" role="button">
+                            <i class="icon-customers"></i> Customers
+                        </a>
+                    </h4>
+                </li>
+                <li class="nav-section">
+                    <h4 class="nav-section-link">
+                        <a class="nav-link" href="#" data-navigo="" role="button">
+                            <i class="icon-employees"></i> Employees
+                        </a>
+                    </h4>
+                </li>
+                <li class="nav-section">
+                    <h4 class="nav-section-link">
+                        <a class="nav-link" href="#" data-navigo="" role="button">
+                            <i class="icon-settings"></i> Settings
+                        </a>
+                    </h4>
+                </li>
+
+            </ul>
+        </div>
+        <div class="sidebar-foot">
+            <div class="app-version">
+                Version 1.0.0
+            </div>
+        </div>
+    </aside>
+
+    <main role="main" itemscope itemprop="mainContentOfPage">
+
+        <div class="main-header">
+            <nav class="navbar">
+                <a class="navbar-brand d-xl-none" href="/#/"><img src="./images/GrapeTown.svg" alt=""></a>
+                <h1>Events</h1>
+                <div class="ml-auto d-flex align-items-center">
+                    <div class="navbar-date">Wednesday, 9 October 2019</div>
+                    <a href="" class="navbar-bell"><i class="icon-bell navbar-bell-ring"></i></a>
+                    <ul class="navbar-nav ml-auto flex-row">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="d-none d-sm-inline">Jan Kowalski</span>
+                                <span class="avatar bg-primary ml-sm-16">JK</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <button type="button" data-toggle="sidebar" data-target="#sidebar-nav" aria-expanded="false" aria-controls="aside-nav" class="btn btn-sm btn-outline-light ml-24 ml-sm-32 d-xl-none">Menu</button>
+                </div>
+            </nav>
+        </div>
+
+        <div class="main-view" id="view">
+
+            <div class="d-flex flex-column flex-sm-row flex-sm-wrap align-items-sm-center">
+                <div class="pb-32 gray-600 d-flex align-items-sm-center nav-overflow">
+                    <a href="" class="btn btn-sm btn-status status-new">New</a>
+                    <a href="" class="btn btn-sm btn-status status-confirmed active">Zatwierdzone</a>
+                    <a href="" class="btn btn-sm btn-status status-paid">Opłacone</a>
+                    <a href="" class="btn btn-sm btn-status status-all">Wszystkie</a>
+                    <span class="pl-md-32 d-none d-lg-inline-block">Showing 1-10 of 12</span>
+                </div>
+                <div class="ml-sm-auto mb-32">
+                    <button type="button" class="btn btn-link d-flex d-sm-inline-flex" data-toggle="modal" data-target="#successModal">
+                        <i class="icon-plus mr-8"></i> Add new event
+                    </button>
+                </div>
+            </div>
+
+            <div class="table-responsive mb-16">
+                <table class="table sort-table">
+                    <thead>
+                        <tr>
+                            <th data-orderable="false"></th>
+                            <th>ID</th>
+                            <th>Date of reservation</th>
+                            <th>Room</th>
+                            <th>Type of event</th>
+                            <th>Adults/children</th>
+                            <th>Customer</th>
+                            <th class="text-right">Calculated price</th>
+                            <th data-orderable="false">Status</th>
+                            <th class="text-center" data-orderable="false">Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>4587963</td>
+                            <td>2019.07.16<br> <small>15:00-23:00</small></td>
+                            <td>Wino i Grono</td>
+                            <td>Komunia</td>
+                            <td>24/18=42</td>
+                            <td>Wieńczysław Nieszczególny</td>
+                            <td class="text-right">12 500 PLN</td>
+                            <td><div class="status status-confirmed">ZATWIERDZONE</div></td>
+                            <td class="text-center px-8">
+                                <button type="button" class="btn btn-light btn-lg px-16" data-toggle="modal" data-target="#successModal">
+                                    <i class="icon-edit"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>4587963</td>
+                            <td>2019.07.16<br> <small>15:00-23:00</small></td>
+                            <td>Wino i Grono</td>
+                            <td>Komunia</td>
+                            <td>24/18=42</td>
+                            <td>Wieńczysław Nieszczególny</td>
+                            <td class="text-right">12 500 PLN</td>
+                            <td><div class="status status-new">NEW</div></td>
+                            <td class="text-center px-8">
+                                <button type="button" class="btn btn-light btn-lg px-16" data-toggle="modal" data-target="#dangerModal">
+                                    <i class="icon-edit"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>4587963</td>
+                            <td>2019.07.16<br> <small>15:00-23:00</small></td>
+                            <td>Wino i Grono</td>
+                            <td>Komunia</td>
+                            <td>24/18=42</td>
+                            <td>Wieńczysław Nieszczególny</td>
+                            <td class="text-right">12 500 PLN</td>
+                            <td><div class="status status-paid">ZAPŁACONE</div></td>
+                            <td class="text-center px-8">
+                                <button type="button" class="btn btn-light btn-lg px-16" data-toggle="modal" data-target="#infoModal">
+                                    <i class="icon-edit"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="gray-400">
+                            <td>4</td>
+                            <td>4587963</td>
+                            <td>2019.07.16<br> <small>15:00-23:00</small></td>
+                            <td>Wino i Grono</td>
+                            <td>Komunia</td>
+                            <td>24/18=42</td>
+                            <td>Wieńczysław Nieszczególny</td>
+                            <td class="text-right">12 500 PLN</td>
+                            <td><div class="status status-canceled">ODRZUCONE</div></td>
+                            <td class="text-center px-8">
+                                <button type="button" class="btn btn-light btn-lg px-16" data-toggle="modal" data-target="#warningModal">
+                                    <i class="icon-edit"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <script>
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    $('.sort-table').DataTable({
+                        "lengthChange": false,
+                        "ordering": true,
+                        "info": false,
+                        "paging": false,
+                        "searching": false,
+                        "order": [[ 1, "desc" ]]
+                    });
+                });
+
+            </script>
+
+            <div class="d-flex flex-column flex-sm-row flex-sm-wrap align-items-sm-center">
+                <div class="mb-32 gray-600 d-flex align-items-center">
+                    <span class="pr-3">View on the page </span>
+                    <a href="" class="btn btn-sm btn-light px-3 active">10</a>
+                    <a href="" class="btn btn-sm btn-light px-3">50</a>
+                    <a href="" class="btn btn-sm btn-light px-3">All</a>
+                </div>
+                <div class="ml-sm-auto mb-32">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination mb-0">
+                            <li class="page-item">
+                                <a class="page-link" aria-label="Previous">
+                                    <span aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            </li>
+                            <li class="page-item active">
+                                <a class="page-link">1</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link">2</a>
+                            </li>
+                            <li class="page-truncate">...</li>
+                            <li class="page-item">
+                                <a class="page-link">12</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" aria-label="Next">
+                                    <span aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="bs4-xs d-block d-sm-none"></div>
+    <div class="bs4-sm d-none d-sm-block d-md-none"></div>
+    <div class="bs4-md d-none d-md-block d-lg-none"></div>
+    <div class="bs4-lg d-none d-lg-block d-xl-none"></div>
+    <div class="bs4-xl d-none d-xl-block d-sl-none"></div>
+    <div class="bs4-sl d-none d-sl-block"></div>
+
+    <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-alert">
+                <div class="modal-alert-icon">
+                    <i class="icon-check"></i>
+                </div>
+                <div class="modal-alert-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><span class="icon-close"></span></span>
+                    </button>
+                    <p>Komunikat potwierdzający wykonaną operację</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="dangerModal" tabindex="-1" role="dialog" aria-labelledby="dangerModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-alert">
+                <div class="modal-alert-icon">
+                    <i class="icon-danger"></i>
+                </div>
+                <div class="modal-alert-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><span class="icon-close"></span></span>
+                    </button>
+                    <p>Komunikat potwierdzający wykonaną operację</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-alert">
+                <div class="modal-alert-icon">
+                    <i class="icon-info"></i>
+                </div>
+                <div class="modal-alert-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><span class="icon-close"></span></span>
+                    </button>
+                    <p>Komunikat potwierdzający wykonaną operację</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="warningModal" tabindex="-1" role="dialog" aria-labelledby="warningModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-alert">
+                <div class="modal-alert-icon">
+                    <i class="icon-warning"></i>
+                </div>
+                <div class="modal-alert-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><span class="icon-close"></span></span>
+                    </button>
+                    <p>Komunikat potwierdzający wykonaną operację</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

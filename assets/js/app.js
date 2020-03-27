@@ -63,7 +63,7 @@ $(document).ready( function() {
 
     moment.locale('pl');
 
-    $('.date-picker').daterangepicker({
+    $('.js-date-picker').daterangepicker({
         timePicker: true,
         timePicker24Hour: true,
         useSeconds: false,
@@ -81,7 +81,11 @@ $(document).ready( function() {
         picker.container.addClass('timePicker');
     });
 
-    $('.single-date-picker').daterangepicker({
+
+
+    const jsSingleDatePicker= $('.js-single-date-picker')
+
+    $('.js-single-date-picker').daterangepicker({
         singleDatePicker: true,
         autoUpdateInput: false,
         startDate: '+1d',
@@ -92,7 +96,40 @@ $(document).ready( function() {
         }
     }).data('daterangepicker');
 
-    $('.custom-select').bsSelectInit();
+    jsSingleDatePicker.on('apply.daterangepicker', function(ev, picker) {
+        $(this).val(picker.startDate.format('DD.MM.YYYY hh:mm'));
+    });
+
+    jsSingleDatePicker.on('cancel.daterangepicker', function(ev, picker) {
+        $(this).val('');
+    });
+
+
+    const jsSingleDateTimePicker= $('.js-single-date-time-picker')
+
+    jsSingleDateTimePicker.daterangepicker({
+        singleDatePicker: true,
+        autoUpdateInput: false,
+        timePicker: true,
+        timePicker24Hour: true,
+        startDate: '+1d',
+        cancelClass: "btn-secondary",
+        parentEl: '#view',
+        locale: {
+            format: 'DD.MM.YYYY hh:mm'
+        }
+    }).data('daterangepicker');
+
+    jsSingleDateTimePicker.on('apply.daterangepicker', function(ev, picker) {
+        $(this).val(picker.startDate.format('DD.MM.YYYY hh:mm'));
+    });
+
+    jsSingleDateTimePicker.on('cancel.daterangepicker', function(ev, picker) {
+        $(this).val('');
+    });
+
+
+    $('.js-custom-select').bsSelectInit();
 
     function selectRow(elem) {
         let $this = $(elem),
