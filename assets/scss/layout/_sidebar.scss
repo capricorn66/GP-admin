@@ -45,7 +45,7 @@ body {
 
   @include media-breakpoint-down(lg) {
 
-    margin-left: -280px;
+    margin-left: -240px;
     &:not(.sidebar-move) {
       transition: transform .2s;
     }
@@ -65,8 +65,8 @@ body {
 
     &.sidebar-state-opened,
     &.sidebar-end-position {
-      transform: translateX(280px);
-      box-shadow: 280px 0 0 100vw rgba($gray-900, .3);
+      transform: translateX(240px);
+      box-shadow: 240px 0 0 100vw rgba($gray-900, .3);
       + main {
         overflow: hidden;
       }
