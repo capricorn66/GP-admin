@@ -11,7 +11,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     color: $white;
-    font-weight: 300;
+    font-weight: 500;
     text-align: center;
     width: 40px;
     height: 40px;
@@ -37,6 +37,12 @@
         background: $primary;
         color: $white;
         text-decoration: none;
+    }
+    &.avatar-border-color-3 {
+        border: 3px solid $app-color-3;
+    }
+    &.avatar-border-color-10 {
+        border: 4px solid $app-color-10;
     }
 }
 .avatar-name {

@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="imagetoolbar" content="no">
+    <![endif]-->
+
+    <meta name="Description" content="" />
+    <meta name="Keywords" content="" />
+    <meta name="distribution" content="Global" />
+    <meta name="msapplication-config" content="none"/>
+    <meta name="copyright" content="© eurekamedia.pl" />
+
+    <meta name="robots" content="noindex, nofollow"/>
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="title" content="POLSET admin panel">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap&subset=latin-ext" rel="stylesheet">
+
+<link href="css/0.min.css" rel="stylesheet"><link href="css/style.min.css" rel="stylesheet"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+
+<aside class="sidebar" id="sidebar-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <div class="sidebar-head">
+        <h1><a class="navbar-brand" href="/#/"><img src="./images/GrapeTown.svg" alt=""></a></h1>
+        <button type="button" class="close ml-auto d-xl-none" data-toggle="sidebar" data-target="#sidebar-nav" aria-expanded="false" aria-controls="aside-nav">
+            <span aria-hidden="true"></span>
+        </button>
+    </div>
+    <div class="sidebar-body">
+        <ul class="nav nav-sidebar" id="accordion-nav">
+            <li class="nav-section">
+                <h4 class="nav-section-link">
+                    <a class="nav-link active" href="#" data-navigo="" role="button">
+                        <i class="icon-dashboard"></i> Dashboard
+                    </a>
+                </h4>
+            </li>
+            <li class="nav-section">
+                <h4 class="nav-section-link">
+                    <a class="nav-link" href="#" data-navigo="" role="button">
+                        <i class="icon-calendar"></i> Calendar
+                    </a>
+                </h4>
+            </li>
+            <li class="nav-section">
+                <h4 class="nav-section-link">
+                    <a class="nav-link" href="#" data-navigo="" role="button">
+                        <i class="icon-events"></i> Events <sup class="badge">2</sup>
+                    </a>
+                </h4>
+            </li>
+            <li class="nav-section">
+                <h4 class="nav-section-link">
+                    <a class="nav-link" href="#" data-navigo="" role="button">
+                        <i class="icon-customers"></i> Customers
+                    </a>
+                </h4>
+            </li>
+            <li class="nav-section">
+                <h4 class="nav-section-link">
+                    <a class="nav-link" href="#" data-navigo="" role="button">
+                        <i class="icon-employees"></i> Employees
+                    </a>
+                </h4>
+            </li>
+            <li class="nav-section">
+                <h4 class="nav-section-link">
+                    <a class="nav-link" href="#" data-navigo="" role="button">
+                        <i class="icon-settings"></i> Settings
+                    </a>
+                </h4>
+            </li>
+
+        </ul>
+    </div>
+    <div class="sidebar-foot">
+        <div class="app-version">
+            Version 1.0.0
+        </div>
+    </div>
+</aside>
+
+<main role="main" itemscope itemprop="mainContentOfPage">
+
+    <div class="main-header">
+        <nav class="navbar">
+            <a class="navbar-brand d-xl-none" href="/#/"><img src="./images/GrapeTown.svg" alt=""></a>
+            <h1>Employees</h1>
+            <div class="ml-auto d-flex align-items-center">
+                <div class="navbar-date">Wednesday, 9 October 2019</div>
+                <a href="" class="navbar-bell"><i class="icon-bell navbar-bell-ring"></i></a>
+                <ul class="navbar-nav ml-auto flex-row">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="d-none d-sm-inline">Jan Kowalski</span>
+                            <span class="avatar bg-primary ml-sm-16">JK</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                </ul>
+                <button type="button" data-toggle="sidebar" data-target="#sidebar-nav" aria-expanded="false" aria-controls="aside-nav" class="btn btn-sm btn-outline-light ml-24 ml-sm-32 d-xl-none">Menu</button>
+            </div>
+        </nav>
+    </div>
+
+    <div class="main-view" id="view">
+
+        <div class="d-flex flex-column flex-sm-row flex-sm-wrap align-items-sm-center">
+            <div class="pb-32 gray-600 d-flex align-items-sm-center nav-overflow">
+                <a href="" class="btn btn-sm btn-default mr-8 active">Current</a>
+                <a href="" class="btn btn-sm btn-default mr-8">Former</a>
+                <span class="pl-md-32 d-none d-lg-inline-block">Showing 1-10 of 12</span>
+            </div>
+            <div class="ml-sm-auto mb-32">
+                <button type="button" class="btn btn-link d-flex d-sm-inline-flex" data-toggle="modal" data-target="#">
+                    <i class="icon-plus mr-8"></i> Add new employee
+                </button>
+            </div>
+        </div>
+
+        <div class="table-responsive mb-16">
+            <table class="table sort-table">
+                <thead>
+                <tr>
+                    <th data-orderable="false"></th>
+                    <th data-orderable="false"></th>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Position</th>
+                    <th>Department</th>
+                    <th>Full-time work</th>
+                    <th>Profile</th>
+                    <th>E-mail adress</th>
+                    <th data-orderable="false">Phone number</th>
+                    <th class="text-right" data-orderable="false">Details</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><span class="avatar bg-app-color-10">JK</span></td>
+                    <td>Roman</td>
+                    <td>Waligóra</td>
+                    <td>Kierownik sali</td>
+                    <td>Kierownictwo</td>
+                    <td class="text-center"><i class="icon-check app-color-8 font-24 mr-24"></i></td>
+                    <td>Admin</td>
+                    <td><a href="" class="gray-900">j.waligora@grapetownhotel.pl</a></td>
+                    <td class="no-wrap">569 589 589</td>
+                    <td class="text-right">
+                        <a href="" class="btn btn-light btn-lg px-16"><i class="icon-edit"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><span class="avatar avatar-border-color-10" style="background-image: url('./images/user.jpg')"></span></td>
+                    <td>Władysława</td>
+                    <td>Wąsacz</td>
+                    <td>Z-ca kierownika sali</td>
+                    <td>Kierownictwo</td>
+                    <td class="text-center"><i class="icon-minus app-color-9 font-24 mr-24"></i></td>
+                    <td>Admin</td>
+                    <td><a href="" class="gray-900">j.wasacz@grapetownhotel.pl</a></td>
+                    <td class="no-wrap">796 036 902</td>
+                    <td class="text-right">
+                        <a href="" class="btn btn-light btn-lg px-16"><i class="icon-edit"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><span class="avatar avatar-border-color-1" style="background-image: url('./images/user.jpg')"></span></td>
+                    <td>Edmund</td>
+                    <td>Buzdygan</td>
+                    <td>Z-ca kierownika sali</td>
+                    <td>Kierownictwo</td>
+                    <td class="text-center"><i class="icon-check app-color-8 font-24 mr-24"></i></td>
+                    <td>Obsługa klienta</td>
+                    <td><a href="" class="gray-900">j.buzdygan@grapetownhotel.pl</a></td>
+                    <td class="no-wrap">586 582 582</td>
+                    <td class="text-right">
+                        <a href="" class="btn btn-light btn-lg px-16"><i class="icon-edit"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><span class="avatar avatar-border-color-3" style="background-image: url('./images/user.jpg')"></span></td>
+                    <td>Bronisław</td>
+                    <td>Wesołkiewicz-Baranowska</td>
+                    <td>Kelner</td>
+                    <td>Obsługa sali</td>
+                    <td class="text-center"><i class="icon-check app-color-8 font-24 mr-24"></i></td>
+                    <td>Obsługa klienta</td>
+                    <td><a href="" class="gray-900">askawesolkiewicz@gmail.com</a></td>
+                    <td class="no-wrap">690 580 580</td>
+                    <td class="text-right">
+                        <a href="" class="btn btn-light btn-lg px-16"><i class="icon-edit"></i></a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function() {
+                $('.sort-table').DataTable({
+                    "lengthChange": false,
+                    "ordering": true,
+                    "info": false,
+                    "paging": false,
+                    "searching": false,
+                    "order": [[ 2, "desc" ]]
+                });
+            });
+
+        </script>
+
+        <div class="d-flex flex-column flex-sm-row flex-sm-wrap align-items-sm-center">
+            <div class="mb-32 gray-600 d-flex align-items-center">
+                <span class="pr-3">View on the page </span>
+                <a href="" class="btn btn-sm btn-light px-3 active">10</a>
+                <a href="" class="btn btn-sm btn-light px-3">50</a>
+                <a href="" class="btn btn-sm btn-light px-3">All</a>
+            </div>
+            <div class="ml-sm-auto mb-32">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination mb-0">
+                        <li class="page-item">
+                            <a class="page-link" aria-label="Previous">
+                                <span aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                        </li>
+                        <li class="page-item active">
+                            <a class="page-link">1</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link">2</a>
+                        </li>
+                        <li class="page-truncate">...</li>
+                        <li class="page-item">
+                            <a class="page-link">12</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" aria-label="Next">
+                                <span aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div class="bs4-xs d-block d-sm-none"></div>
+<div class="bs4-sm d-none d-sm-block d-md-none"></div>
+<div class="bs4-md d-none d-md-block d-lg-none"></div>
+<div class="bs4-lg d-none d-lg-block d-xl-none"></div>
+<div class="bs4-xl d-none d-xl-block d-sl-none"></div>
+<div class="bs4-sl d-none d-sl-block"></div>
+
+<script type="text/javascript" src="js/vendor.min.js"></script><script type="text/javascript" src="js/script.min.js"></script><script type="text/javascript" src="js/style.min.js"></script></body>
+</html>
