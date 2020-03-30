@@ -23,6 +23,9 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-upload:before {
+  content: "\e91c";
+}
 .icon-file-pdf:before {
   content: "\e91b";
 }
