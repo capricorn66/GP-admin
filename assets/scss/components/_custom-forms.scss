@@ -399,6 +399,28 @@ select.custom-select {
   }
 }
 
+.custom-control-input ~ .custom-control-label {
+  &.color-item {
+    width: 0;
+    height: 0;
+    &::before {
+      border-color: transparent;
+      background-color: inherit;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      position: relative;
+      display: block;
+      cursor: pointer;
+    }
+    &::after {
+      left: -20px;
+      top: 10px;
+    }
+  }
+}
+
+
 .custom-control-label {
   min-height: 2.4rem;
   line-height: 1.4em;

@@ -96,5 +96,48 @@ select.form-control {
     color: $input-color;
     background-color: $input-bg;
   }
+}
 
+.custom-file-box {
+  display: block;
+  height: auto;
+  .custom-file-input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+  .custom-file-label {
+    border: 2px dashed $gray-500;
+    text-align: center;
+    padding: 120px 20px 80px;
+    background: none;
+    display: block;
+    position: relative;
+    &::after {
+      display: none;
+    }
+    &::before {
+      content: "\e91c";
+      position: absolute;
+      top: 40px;
+      left: 0;
+      right: 0;
+      font-size: 64px;
+      color: $gray-300;
+      /* use !important to prevent issues with browser extensions that change fonts */
+      font-family: 'icomoon' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  }
 }

@@ -15,6 +15,7 @@ import bsSelectInit from './bootstrap-select.js';
 import {bodyLock} from './body-lock.js';
 import {sidebarInit} from './sidebar.js';
 import DataTable from 'datatables.net-dt';
+import bsCustomFileInput from 'bs-custom-file-input';
 
 window.debounce = debounce;
 window.swipe = swipe;
@@ -27,7 +28,7 @@ window.bsSelectInit = bsSelectInit;
 window.bodyLock = bodyLock;
 window.sidebarInit = sidebarInit;
 window.DataTable = DataTable;
-
+window.bsCustomFileInput = bsCustomFileInput;
 sidebarInit();
 
 
@@ -53,6 +54,7 @@ window.tagglePass = tagglePass;
 $(document).ready( function() {
 
     wavesInit();
+    bsCustomFileInput.init();
 
     $('.btn-accordion .btn').click(function(event) {
         event.preventDefault();

@@ -92,7 +92,7 @@
     <div class="main-header">
         <nav class="navbar">
             <a class="navbar-brand d-xl-none" href="/#/"><img src="./images/GrapeTown.svg" alt=""></a>
-            <h1>Employees</h1>
+            <h1>Arrangement of tables</h1>
             <div class="ml-auto d-flex align-items-center">
                 <div class="navbar-date">Wednesday, 9 October 2019</div>
                 <a href="" class="navbar-bell"><i class="icon-bell navbar-bell-ring"></i></a>
@@ -117,14 +117,16 @@
     <div class="main-view" id="view">
 
         <div class="d-flex flex-column flex-sm-row flex-sm-wrap align-items-sm-center">
-            <div class="pb-32 gray-600 d-flex align-items-sm-center nav-overflow">
-                <a href="" class="btn btn-sm btn-default mr-8 active">Current</a>
-                <a href="" class="btn btn-sm btn-default mr-8">Former</a>
-                <span class="pl-md-32 d-none d-lg-inline-block">Showing 1-10 of 12</span>
+            <div class="d-flex flex-column flex-sm-row flex-sm-wrap align-items-sm-center">
+                <div class="pb-32 gray-600 d-flex align-items-sm-center nav-overflow">
+                    <a href="" class="btn btn-sm btn-default mr-8">Profiles</a>
+                    <a href="" class="btn btn-sm btn-default mr-8">Permissions</a>
+                    <a href="" class="btn btn-sm btn-default mr-8 active">Departments</a>
+                </div>
             </div>
             <div class="ml-sm-auto mb-32">
-                <button type="button" class="btn btn-link d-flex d-sm-inline-flex" data-toggle="modal" data-target="#">
-                    <i class="icon-plus mr-8"></i> Add new employee
+                <button type="button" class="btn btn-link d-flex d-sm-inline-flex" data-toggle="modal" data-target="#addModal">
+                    <i class="icon-plus mr-8"></i> Add new department
                 </button>
             </div>
         </div>
@@ -133,78 +135,64 @@
             <table class="table sort-table">
                 <thead>
                 <tr>
-                    <th data-orderable="false"></th>
-                    <th data-orderable="false"></th>
-                    <th>First name</th>
-                    <th>Last name</th>
-                    <th>Position</th>
-                    <th>Department</th>
-                    <th>Full-time work</th>
-                    <th>Profile</th>
-                    <th>E-mail adress</th>
-                    <th data-orderable="false">Phone number</th>
-                    <th class="text-right" data-orderable="false">Details</th>
+                    <th data-orderable="false" style="width: 1%"></th>
+                    <th>Name</th>
+                    <th>Colour</th>
+                    <th class="text-center" style="width: 1%" data-orderable="false">Edit</th>
+                    <th class="text-center" style="width: 1%" data-orderable="false">Delete</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <td>1</td>
-                    <td><span class="avatar bg-app-color-10">JK</span></td>
-                    <td>Roman</td>
-                    <td>Waligóra</td>
-                    <td>Kierownik sali</td>
-                    <td>Kierownictwo</td>
-                    <td class="text-center"><i class="icon-check app-color-8 font-24 mr-24"></i></td>
-                    <td>Admin</td>
-                    <td><a href="" class="gray-900">j.waligora@grapetownhotel.pl</a></td>
-                    <td class="no-wrap">569 589 589</td>
-                    <td class="text-right">
+                    <td>Obsługa sali</td>
+                    <td>
+                        <div class="color-item bg-app-color-10"></div>
+                    </td>
+                    <td class="text-center px-8">
                         <a href="" class="btn btn-light btn-lg px-16"><i class="icon-edit"></i></a>
+                    </td>
+                    <td class="text-center px-8">
+                        <a href="" class="btn btn-primary-light btn-lg px-16"><i class="icon-delete"></i></a>
                     </td>
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td><span class="avatar avatar-border-color-10" style="background-image: url('./images/user.jpg')"></span></td>
-                    <td>Władysława</td>
-                    <td>Wąsacz</td>
-                    <td>Z-ca kierownika sali</td>
-                    <td>Kierownictwo</td>
-                    <td class="text-center"><i class="icon-minus app-color-9 font-24 mr-24"></i></td>
-                    <td>Admin</td>
-                    <td><a href="" class="gray-900">j.wasacz@grapetownhotel.pl</a></td>
-                    <td class="no-wrap">796 036 902</td>
-                    <td class="text-right">
+                    <td>Kuchnia</td>
+                    <td>
+                        <div class="color-item bg-app-color-11"></div>
+                    </td>
+                    <td class="text-center px-8">
                         <a href="" class="btn btn-light btn-lg px-16"><i class="icon-edit"></i></a>
+                    </td>
+                    <td class="text-center px-8">
+                        <a href="" class="btn btn-primary-light btn-lg px-16"><i class="icon-delete"></i></a>
                     </td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td><span class="avatar avatar-border-color-1" style="background-image: url('./images/user.jpg')"></span></td>
-                    <td>Edmund</td>
-                    <td>Buzdygan</td>
-                    <td>Z-ca kierownika sali</td>
-                    <td>Kierownictwo</td>
-                    <td class="text-center"><i class="icon-check app-color-8 font-24 mr-24"></i></td>
-                    <td>Obsługa klienta</td>
-                    <td><a href="" class="gray-900">j.buzdygan@grapetownhotel.pl</a></td>
-                    <td class="no-wrap">586 582 582</td>
-                    <td class="text-right">
+                    <td>Sprzątanie</td>
+                    <td>
+                        <div class="color-item bg-app-color-12"></div>
+                    </td>
+                    <td class="text-center px-8">
                         <a href="" class="btn btn-light btn-lg px-16"><i class="icon-edit"></i></a>
+                    </td>
+                    <td class="text-center px-8">
+                        <a href="" class="btn btn-primary-light btn-lg px-16"><i class="icon-delete"></i></a>
                     </td>
                 </tr>
                 <tr>
                     <td>4</td>
-                    <td><span class="avatar avatar-border-color-3" style="background-image: url('./images/user.jpg')"></span></td>
-                    <td>Bronisław</td>
-                    <td>Wesołkiewicz-Baranowska</td>
-                    <td>Kelner</td>
-                    <td>Obsługa sali</td>
-                    <td class="text-center"><i class="icon-check app-color-8 font-24 mr-24"></i></td>
-                    <td>Obsługa klienta</td>
-                    <td><a href="" class="gray-900">askawesolkiewicz@gmail.com</a></td>
-                    <td class="no-wrap">690 580 580</td>
-                    <td class="text-right">
+                    <td>Administracja</td>
+                    <td>
+                        <div class="color-item bg-app-color-13"></div>
+                    </td>
+                    <td class="text-center px-8">
                         <a href="" class="btn btn-light btn-lg px-16"><i class="icon-edit"></i></a>
+                    </td>
+                    <td class="text-center px-8">
+                        <a href="" class="btn btn-primary-light btn-lg px-16"><i class="icon-delete"></i></a>
                     </td>
                 </tr>
                 </tbody>
@@ -220,7 +208,7 @@
                     "info": false,
                     "paging": false,
                     "searching": false,
-                    "order": [[ 2, "desc" ]]
+                    "order": [[ 1, "desc" ]]
                 });
             });
 
@@ -271,6 +259,87 @@
 <div class="bs4-lg d-none d-lg-block d-xl-none"></div>
 <div class="bs4-xl d-none d-xl-block d-sl-none"></div>
 <div class="bs4-sl d-none d-sl-block"></div>
+
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-gray-600">
+                <h5 class="modal-title" id="addModalLabel">Add new dish</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><span class="icon-close"></span></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group mb-32">
+                    <label for="name18">Name</label>
+                    <input class="form-control" id="name18">
+                </div>
+                <div class="form-group">
+                    <label>Colour</label>
+                    <div>
+
+                        <div class="custom-control custom-checkbox custom-control-inline mb-16 mr-16">
+                            <input type="checkbox" class="custom-control-input" id="customControlDelete1">
+                            <label class="custom-control-label color-item bg-app-color-1" for="customControlDelete1">&nbsp;</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline mb-16 mr-16">
+                            <input type="checkbox" class="custom-control-input" id="customControlDelete2">
+                            <label class="custom-control-label color-item bg-app-color-2" for="customControlDelete2">&nbsp;</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline mb-16 mr-16">
+                            <input type="checkbox" class="custom-control-input" id="customControlDelete3">
+                            <label class="custom-control-label color-item bg-app-color-3" for="customControlDelete3">&nbsp;</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline mb-16 mr-16">
+                            <input type="checkbox" class="custom-control-input" id="customControlDelete4">
+                            <label class="custom-control-label color-item bg-app-color-4" for="customControlDelete4">&nbsp;</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline mb-16 mr-16">
+                            <input type="checkbox" class="custom-control-input" id="customControlDelete5">
+                            <label class="custom-control-label color-item bg-app-color-5" for="customControlDelete5">&nbsp;</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline mb-16 mr-16">
+                            <input type="checkbox" class="custom-control-input" id="customControlDelete6">
+                            <label class="custom-control-label color-item bg-app-color-6" for="customControlDelete6">&nbsp;</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline mb-16 mr-16">
+                            <input type="checkbox" class="custom-control-input" id="customControlDelete7">
+                            <label class="custom-control-label color-item bg-app-color-7" for="customControlDelete7">&nbsp;</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline mb-16 mr-16">
+                            <input type="checkbox" class="custom-control-input" id="customControlDelete8">
+                            <label class="custom-control-label color-item bg-app-color-8" for="customControlDelete8">&nbsp;</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline mb-16 mr-16">
+                            <input type="checkbox" class="custom-control-input" id="customControlDelete9">
+                            <label class="custom-control-label color-item bg-app-color-9" for="customControlDelete9">&nbsp;</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline mb-16 mr-16">
+                            <input type="checkbox" class="custom-control-input" id="customControlDelete10">
+                            <label class="custom-control-label color-item bg-app-color-10" for="customControlDelete10">&nbsp;</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline mb-16 mr-16">
+                            <input type="checkbox" class="custom-control-input" id="customControlDelete11">
+                            <label class="custom-control-label color-item bg-app-color-11" for="customControlDelete11">&nbsp;</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline mb-16 mr-16">
+                            <input type="checkbox" class="custom-control-input" id="customControlDelete12">
+                            <label class="custom-control-label color-item bg-app-color-12" for="customControlDelete12">&nbsp;</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline mb-16 mr-16">
+                            <input type="checkbox" class="custom-control-input" id="customControlDelete13">
+                            <label class="custom-control-label color-item bg-app-color-13" for="customControlDelete13">&nbsp;</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">SAVE</button>
+                <button type="button" class="btn btn-link" data-dismiss="modal">CANCEL</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
