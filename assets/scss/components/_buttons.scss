@@ -115,6 +115,19 @@ button {
         }
     }
 
+    &.btn-outline-primary {
+        background-color: transparent;
+        box-shadow: 0 0 0 1px $gray-400 inset;
+        color: $gray-900;
+        &:not(:disabled):not(.disabled):active,
+        &:active,
+        &:focus,
+        &:hover {
+            background-color: $app-color-6;
+            box-shadow: 0 0 0 1px $app-color-6 inset;
+        }
+    }
+
     &.btn-primary-light {
         background-color: rgba($app-color-7,.2);
         color: $app-color-6;
