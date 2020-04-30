@@ -17,7 +17,7 @@
     "bootstrap-select": "^1.13.10",
     "datatables.net-dt": "^1.10.19",
     "daterangepicker": "^3.0.5",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery-touchswipe": "^1.6.19",
     "lodash.debounce": "^4.0.8",
     "moment": "^2.24.0",
