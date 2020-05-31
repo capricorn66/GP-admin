@@ -111,19 +111,19 @@ $(document).ready( function() {
 
     jsSingleDateTimePicker.daterangepicker({
         singleDatePicker: true,
-        autoUpdateInput: false,
+        //autoUpdateInput: true,
         timePicker: true,
         timePicker24Hour: true,
         startDate: '+1d',
         cancelClass: "btn-secondary",
         parentEl: '#view',
         locale: {
-            format: 'DD.MM.YYYY hh:mm'
+            "format": "MM/DD/YYYY HH:mm",
         }
     }).data('daterangepicker');
 
     jsSingleDateTimePicker.on('apply.daterangepicker', function(ev, picker) {
-        $(this).val(picker.startDate.format('DD.MM.YYYY hh:mm'));
+        $(this).val(picker.startDate.format('DD.MM.YYYY HH:mm'));
     });
 
     jsSingleDateTimePicker.on('cancel.daterangepicker', function(ev, picker) {
