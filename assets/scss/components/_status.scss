@@ -19,4 +19,10 @@
   &.status-canceled {
     background-color: $gray-400;
   }
+  &.status-rejected {
+    background-color: $app-color-9;
+  }
+  &.status-accepted {
+    background-color: $app-color-8;
+  }
 }

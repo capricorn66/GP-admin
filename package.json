@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "start": "webpack-dev-server --disableHostCheck true --content-base app/",
+    "server": "webpack-dev-server --host 192.168.1.39 --disableHostCheck true --content-base app/",
     "prebuild": "npm run clean",
     "build": "webpack --mode production",
     "predev": "npm run clean",
